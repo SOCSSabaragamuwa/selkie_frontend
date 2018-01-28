@@ -1,0 +1,47 @@
+
+
+.content{
+    text-align: center;
+    padding:10px;
+    animation: 2s ease-out 0s 1 captionAnimation;
+}
+
+.info-card{
+
+    /* background-color: blueviolet; */
+    padding: 20px;
+}
+.recent-info-pallet{
+
+    padding: 10px;
+}
+.card-spec h2{
+
+
+    text-align:center;
+    margin-top:0;
+}
+.card{
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition:1s;
+    transform:scale(1);
+    animation: 2s ease-out 0s 1 captionAnimation;
+}
+
+.card:hover{
+    transition: 1s;
+    transform: scale(1.1);
+}
+
+
+@keyframes captionAnimation{
+    0% {
+        transform:translateY(100px);
+        opacity: 0;
+      }
+      100% {
+        transform:translateY(0);
+        opacity: 1;
+      }
+}
