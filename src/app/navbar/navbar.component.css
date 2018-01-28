@@ -1,0 +1,35 @@
+
+
+  
+  .custom-nav-style{  
+
+    animation: 1s ease-in 0s 1 slideInFromTop;
+
+  }
+
+  .login-btn{
+    margin-top:7px;
+    width:100px;
+  }
+
+
+  
+/* this is for small devices  */
+
+
+  @media only screen and (max-width: 768px) {
+    .links li{
+        text-align: center;
+    }
+}
+
+/* Animations */
+
+@keyframes slideInFromTop{
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
