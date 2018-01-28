@@ -1,6 +1,2 @@
 
-body{
-    background-color:red;
-}
-
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
