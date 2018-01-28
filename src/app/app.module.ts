@@ -28,7 +28,7 @@ const appRoutes:Routes=[
 
 
 @NgModule({
-  declaration
+  declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
