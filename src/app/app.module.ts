@@ -28,7 +28,7 @@ const appRoutes:Routes=[
 
 
 @NgModule({
-  declarations: [
+  declaration
     AppComponent,
     HomeComponent,
     HeaderComponent,
@@ -39,8 +39,6 @@ const appRoutes:Routes=[
     AboutusComponent,
     NewsComponent,
     CarriersComponent
-   
-
   ],
   imports: [
     BrowserModule,
@@ -49,8 +47,6 @@ const appRoutes:Routes=[
     NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule
-
-
   ],
   providers: [],
   bootstrap: [AppComponent]
