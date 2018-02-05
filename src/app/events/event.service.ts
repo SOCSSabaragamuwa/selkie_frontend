@@ -21,6 +21,7 @@ export class EventService {
       longDes:"this",
       shortDes:""
      },
+    // {eventName:"EventTwo"},
     // {eventName:"EventThree"}
   ]
 

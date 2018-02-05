@@ -46,6 +46,7 @@ import { EqualValidatorDirective } from './register/equal-validator.directive';
 
 
 
+
 // const appRoutes:Routes=[
 //   {path:'home',component:HomeComponent},
 //   {path:'blog',component:BlogComponent},
