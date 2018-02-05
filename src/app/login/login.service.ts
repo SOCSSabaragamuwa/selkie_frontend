@@ -10,9 +10,10 @@ export class LoginService {
     
 
    }
-   name(login:any){
+   sendData(login:any){
     console.log(login);
     
   }
+  
 
 }

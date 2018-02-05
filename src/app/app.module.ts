@@ -32,6 +32,15 @@ import { AddeventsComponent } from './events/addevents.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { EventService } from './events/event.service';
 import { SearchfilterPipe } from './events/searchfilter.pipe';
+import { AdminComponent } from './admin/admin.component';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import { AdminhomeComponent } from './admin/adminhome.component';
+import { AdmineventlistComponent } from './admin/admineventlist.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { LoginService } from './login/login.service';
+import { RegisterComponent } from './register/register.component';
+import { RegisterService } from './register/register.service';
 
 
 
@@ -61,7 +70,11 @@ import { SearchfilterPipe } from './events/searchfilter.pipe';
     TopeventsComponent,
     EventlistComponent,
     AddeventsComponent,
-    SearchfilterPipe
+    SearchfilterPipe,
+    AdminComponent,
+    AdminhomeComponent,
+    AdmineventlistComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -79,10 +92,15 @@ import { SearchfilterPipe } from './events/searchfilter.pipe';
     MatFormFieldModule,
     MatCardModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatListModule,
+    MatDividerModule,
+    MatTabsModule
   ],
   providers: [
-    EventService
+    EventService,
+    LoginService,
+    RegisterService
   ],
   bootstrap: [AppComponent]
 })

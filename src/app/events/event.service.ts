@@ -4,6 +4,7 @@ import { Eventobj } from './eventobj';
 export class EventService {
   eventList:Eventobj[]=[
     {
+    id:1,
     eventName:"EventOne",
     eventLocation:"location",
     date:"",
@@ -11,7 +12,15 @@ export class EventService {
     longDes:"this",
     shortDes:""
     },
-    // {eventName:"EventTwo"},
+     {
+      id:2,
+      eventName:"EventTwo",
+      eventLocation:"location",
+      date:"",
+      time:"",
+      longDes:"this",
+      shortDes:""
+     },
     // {eventName:"EventThree"}
   ]
 
