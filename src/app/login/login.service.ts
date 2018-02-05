@@ -10,10 +10,6 @@ export class LoginService {
     
 
    }
-<<<<<<< HEAD
-
-=======
->>>>>>> added login components and register components
    sendData(login:any){
     console.log(login);
     

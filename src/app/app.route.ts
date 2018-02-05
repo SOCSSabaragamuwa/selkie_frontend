@@ -14,13 +14,10 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminRouting } from './admin/admin.route';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-<<<<<<< HEAD
 
 import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
-=======
->>>>>>> added login components and register components
 
 
 const APP_ROUTE_PROVIDER: Routes = [
@@ -31,11 +28,7 @@ const APP_ROUTE_PROVIDER: Routes = [
     {path:'blog',component:BlogComponent},
     {path:'login',component:LoginComponent},
     {path:'admin',component:AdminComponent,children:AdminRouting},
-<<<<<<< HEAD
     {path:'user',component:UserprofileComponent},
-=======
-    {path:'careers',component:CarriersComponent},
->>>>>>> added login components and register components
     {path:'aboutus',component:AboutusComponent},
     {path:'event',component:EventsComponent,children:EventRouting},
     {path:'',redirectTo:'home',pathMatch:'full'},
