@@ -5,14 +5,9 @@ import { Login} from './login';
 @Injectable()
 export class LoginService {
 
-  constructor() {
-
-    
-
-   }
-   name(login:any){
+  constructor() {}
+   sendData(login:any){
     console.log(login);
     
   }
-
 }

@@ -11,6 +11,7 @@ import { EventService } from './event.service';
 export class AddeventsComponent implements OnInit {
 
   eventObj: Eventobj = {
+    id:0,
     eventName: "firstEvent",
     eventLocation:"location",
     date:"",

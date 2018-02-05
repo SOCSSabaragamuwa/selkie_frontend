@@ -1,0 +1,209 @@
+<div class="container-fluid custom-form-style">
+  <div class="row">
+    <div class="col-md-5">
+      <form class="example-form" (ngSubmit)="onRegister(f)" #f="ngForm">
+        <div>
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel"
+              required>
+
+
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-12">
+          <mat-error *ngIf="firstName.touched">
+            <mat-error *ngIf="firstName.errors?.required">
+
+              Username is
+              <strong>required</strong>
+            </mat-error>
+            <!-- <mat-error *ngIf="username.errors?.pattern">
+
+                        Username is
+                        <strong>Invalid</strong>
+                    </mat-error> -->
+
+          </mat-error>
+        </div>
+
+        <div>
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.lastName" #lastName="ngModel" required>
+
+
+          </mat-form-field>
+        </div>
+        <div class="col-lg-12">
+          <mat-error *ngIf="lastName.touched">
+            <mat-error *ngIf="lastName.errors?.required">
+
+              Username is
+              <strong>required</strong>
+            </mat-error>
+            <!-- <mat-error *ngIf="username.errors?.pattern">
+
+                        Username is
+                        <strong>Invalid</strong>
+                    </mat-error> -->
+
+          </mat-error>
+        </div>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="birthDay" [(ngModel)]="register.birthDay" #birthDay="ngModel"
+            required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="col-lg-12">
+          <mat-error *ngIf="birthDay.touched">
+            <mat-error *ngIf="birthDay.errors?.required">
+
+              Username is
+              <strong>required</strong>
+            </mat-error>
+            <!-- <mat-error *ngIf="username.errors?.pattern">
+    
+                            Username is
+                            <strong>Invalid</strong>
+                        </mat-error> -->
+
+          </mat-error>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-select placeholder="Gender" name="registerName" [(ngModel)]="register.gender" #registerName="ngModel" required>
+              <mat-option *ngFor="let gender of gender" [value]="gender.value">
+                {{ gender.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-12">
+            <mat-error *ngIf="registerName.touched">
+              <mat-error *ngIf="registerName.errors?.required">
+  
+                Gender is
+                <strong>required</strong>
+              </mat-error>
+            </mat-error>
+          </div>
+
+        <div>
+          <mat-form-field class="example-full-width">
+            <input type="email" matInput placeholder="Email" name="email" [(ngModel)]="register.email" #email="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+
+          </mat-form-field>
+        </div>
+
+        <div class="col-lg-12">
+          <mat-error *ngIf="email.touched">
+            <mat-error *ngIf="email.errors?.required">
+
+              Email is
+              <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="email.errors?.pattern">
+
+              Email is
+              <strong>Invalid</strong>
+            </mat-error>
+          </mat-error>
+        </div>
+
+       
+            <div >
+                <mat-form-field class="example-full-width">
+                    <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="register.username" #username="ngModel" required
+                        pattern="[a-zA-Z][a-zA-Z ]+">
+
+                </mat-form-field>
+            </div>
+            <div class="col-lg-12">
+                <mat-error *ngIf="username.touched">
+                    <mat-error *ngIf="username.errors?.required">
+
+                        Username is
+                        <strong>required</strong>
+                    </mat-error>
+                    <mat-error *ngIf="username.errors?.pattern">
+
+                        Username is
+                        <strong>Invalid</strong>
+                    </mat-error>
+
+                </mat-error>
+            </div>
+        
+
+
+        
+          <div>
+            <mat-form-field class="example-full-width">
+              <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="register.password" #password="ngModel"
+                required minlength="8" maxlength="20" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})">
+
+            </mat-form-field>
+          </div>
+          <div class="col-lg-12">
+
+            <mat-error *ngIf="password.touched">
+              <mat-error *ngIf="password.errors?.required">
+
+                Password is
+                <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf="password.errors?.pattern">
+
+                Password is
+                <strong>Invalid</strong>
+              </mat-error>
+            </mat-error>
+          </div>
+    
+
+       
+            <div>
+
+                <mat-form-field class="example-full-width">
+                    <input type="password" matInput placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="register.confirmPassword"
+                        #confirmPassword="ngModel" required validateEqual="password">
+
+                </mat-form-field>
+
+            </div>
+
+            <div class="col-lg-12">
+
+                <mat-error *ngIf="confirmPassword.touched">
+                    <mat-error *ngIf="confirmPassword.errors?.required">
+
+                        Confirm Password is
+                        <strong>required</strong>
+                    </mat-error>
+
+                    <mat-error *ngIf="!(confirmPassword.valid || confirmPassword.pristine)">
+
+                        Password amd Confirm Password is
+                        <strong>Not matched</strong>
+                    </mat-error>
+
+                </mat-error>
+            </div>
+      
+
+
+        <div class="col-lg-12">
+          <button mat-button>Register</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-7">
+      content area
+    </div>
+  </div>
+</div>
