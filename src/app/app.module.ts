@@ -3,17 +3,23 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { NewsComponent } from './news/news.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewsComponent
 
   ],
   imports: [
     BrowserModule,
-    
+    AngularFontAwesomeModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
