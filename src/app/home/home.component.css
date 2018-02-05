@@ -9,7 +9,8 @@
 .info-card{
 
     /* background-color: blueviolet; */
-    padding: 20px;
+    padding: 0px;
+    overflow: hidden;
 }
 .recent-info-pallet{
 
@@ -32,6 +33,11 @@
 .card:hover{
     transition: 1s;
     transform: scale(1.1);
+}
+
+.spacer{
+
+    height:60px;
 }
 
 

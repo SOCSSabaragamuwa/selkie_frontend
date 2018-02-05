@@ -1,11 +1,13 @@
 .heading{
 
     text-align: center;
-    background-color: chocolate;
+    /* background-color: chocolate; */
     width:60%;
     height:15%;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 80px;
+    animation: 2s ease-out 0s 1 slide-from-right;
+    font-family: 'Octin Prision';
     
 }
 .container-fluid-style{
@@ -15,13 +17,13 @@
 .pallet{
     /* background-color: aqua; */
      padding-top: 3px; 
-     height:100vh;
+     /* height:120vh; */
+    
 }
 .blog-pallet{
-    /* height:100vh; */
-    /* overflow: scroll; */
+  
     margin-bottom:10vh;
-    overflow: scroll;
+    /* overflow: scroll; */
     animation: 2s ease-out 0s 1 opactiy-effect;
     
    
@@ -33,17 +35,30 @@
 }
 
 
+
+.content{
+    margin:20px;
+    text-align: justify;
+    font-family: "roboto",Arial,sans-serif;
+}
+
+
 .card{
-    padding:5px; 
+    
+    padding-top:1px; 
     box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.2);
     
 }
 .card-top-post{
+  
     animation: 2s ease-out 0s 1 slide-from-right;
+    
 }
 
 .card-top-news{
     animation: 2s ease-out 0s 1 slide-from-right;
+
+   
 }
 
 .recent-pallet{
@@ -51,10 +66,25 @@
 }
 .recent{
     margin-bottom:30px;
+   
     
 }
 
 
+
+.news-heading{
+    text-align: center;
+    
+}
+.post-heading{
+    text-align: center;
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+    }
 
 /* media queries */
 @media only screen and (max-width:991px) {
@@ -67,7 +97,8 @@
         padding-right: 0px;
     }
     .top-news{
-        padding-left: 0px;
+        padding-right: 0px;
+       
     }
     
 
@@ -100,3 +131,4 @@
         transform: translateX(0);
     }
 }
+

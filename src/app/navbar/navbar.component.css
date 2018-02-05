@@ -2,6 +2,11 @@
 
   
   .custom-nav-style{  
+    background-color:  #111111;
+   
+   
+    
+
 
     animation: 1s ease-in 0s 1 slideInFromTop;
 
@@ -9,8 +14,39 @@
 
   .login-btn{
     margin-top:7px;
+    margin-right:10px;
+    margin-left:5px;
+    
     width:100px;
+
   }
+  .search{
+    margin-top:7px;
+    /* margin-left:20px; */
+    /* margin-right:10px; */
+     width:90px;
+  }
+
+  .search-button{
+    margin-top:7px;
+  }
+  
+
+  .custom-link  li a{
+
+    transition: 1s;
+    color: #ffff;
+   
+  }
+
+  .brand-name{
+    color: #ffff;
+  }
+
+.search-container{
+  /* width:600px; */
+}
+
 
 
   
@@ -21,9 +57,28 @@
     .links li{
         text-align: center;
     }
+    .search{
+      margin:auto;
+      margin-top:7px;
+      
+      width: 50%;
+     
+    }
 }
 
 /* Animations */
+
+
+.custom-link  li a:hover{
+
+ 
+background-color: gray;
+opacity: 0.8;
+transform:scaleX(1.1);
+transition: 1s;
+ 
+}
+
 
 @keyframes slideInFromTop{
   0% {

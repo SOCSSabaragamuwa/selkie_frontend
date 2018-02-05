@@ -3,7 +3,7 @@
 
  
   <nav class="navbar navbar-default navbar-fixed-top custom-nav-style">
-    <div class="container-fluid">
+    <div class="container-fluid ">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -12,23 +12,28 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <img src="" alt="logo">
+          <img src="../../assets/celosia.png"width="50px" height="25px" alt="logo">
         
         </a>
-        <a class="navbar-brand" href="#">Virtusa</a>
+        <a class="navbar-brand brand-name" href="#">Virtusa</a>
       
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
         </ul>
   
-        <ul class="nav navbar-nav navbar-right links">
-          <li><a href="#"></a></li>
+        <ul class="nav navbar-nav navbar-right links custom-link">
+          
+          
           <li><a routerLink="/home">Home</a></li>
           <li><a routerLink="/blog">Blog</a></li>
-          <li><a href="#">Carriers</a></li>
+          <li><a routerLink="/careers">Carriers</a></li>
+          <li><a routerLink="/event">Events</a></li>
           <li><a routerLink="/aboutus">About us</a></li>
-          <li><button mat-raised-button color="primary" class="login-btn">Primary</button></li>
+
+          <li><button mat-raised-button color="primary" class="login-btn">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button></li>
+          
+
         </ul>
       </div>
     </div>

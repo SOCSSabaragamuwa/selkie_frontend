@@ -2,12 +2,17 @@
 
 .custom-style-carsouel{
 
-    padding: 5px;
-    margin-top: 50px;
+    
+    padding-left: 15%;
+    padding-right: 15%;
+    /* margin-top: 60px; */
     animation: 2s ease-out 0s 1 growFromSmall;
+    
+  
     
 
 }
+
 
 .custom-caption-style{
 
@@ -16,6 +21,18 @@
 
 
 
+
+/* media attribute */
+
+@media only screen and (max-width: 768px)and (min-width:0px) {
+
+  .custom-style-carsouel{
+    padding-left: 0%;
+    padding-right: 0%;
+    
+  }
+
+}
 
 
 /* Animations */
