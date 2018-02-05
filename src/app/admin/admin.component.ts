@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+<<<<<<< HEAD
 declare var $: any
 
 
+=======
+>>>>>>> added login components and register components
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -11,6 +14,7 @@ declare var $: any
 })
 export class AdminComponent implements OnInit {
 
+<<<<<<< HEAD
 
   constructor(private router: Router) { }
 
@@ -64,6 +68,17 @@ export class AdminComponent implements OnInit {
   }
   addEvent() {
 
+=======
+  constructor( private router:Router) { }
+
+  ngOnInit() {
+  }
+
+  showEvent(){
+    this.router.navigate(['/admin/event']);
+  }
+  addEvent(){
+>>>>>>> added login components and register components
     this.router.navigate(['/admin/event/addevent']);
   }
 

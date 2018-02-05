@@ -43,10 +43,13 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { LoginService } from './login/login.service';
 import { RegisterComponent } from './register/register.component';
 import { RegisterService } from './register/register.service';
+<<<<<<< HEAD
 import {MatSelectModule} from '@angular/material/select';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 
+=======
+>>>>>>> added login components and register components
 
 
 
@@ -80,11 +83,15 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     AdminComponent,
     AdminhomeComponent,
     AdmineventlistComponent,
+<<<<<<< HEAD
     RegisterComponent,
     EqualValidatorDirective,
     UserprofileComponent,
     
 
+=======
+    RegisterComponent
+>>>>>>> added login components and register components
   ],
   imports: [
     BrowserModule,
@@ -105,10 +112,14 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     MatNativeDateModule,
     MatListModule,
     MatDividerModule,
+<<<<<<< HEAD
     MatTabsModule,
     MatExpansionModule,
 
     MatSelectModule
+=======
+    MatTabsModule
+>>>>>>> added login components and register components
   ],
   providers: [
     EventService,

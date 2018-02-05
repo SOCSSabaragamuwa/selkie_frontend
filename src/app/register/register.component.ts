@@ -9,6 +9,7 @@ import { RegisterService } from './register.service';
 })
 export class RegisterComponent implements OnInit {
   register:Register={
+<<<<<<< HEAD
     firstName:"",
     lastName:"",
     birthDay:"",
@@ -24,6 +25,10 @@ export class RegisterComponent implements OnInit {
     {value: 'female', viewValue: 'Female'}
     
   ];
+=======
+    firstName:"sathira"
+  }
+>>>>>>> added login components and register components
   constructor(private registerService:RegisterService) { 
 
   }
