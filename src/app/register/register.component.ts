@@ -9,8 +9,21 @@ import { RegisterService } from './register.service';
 })
 export class RegisterComponent implements OnInit {
   register:Register={
-    firstName:"sathira"
+    firstName:"",
+    lastName:"",
+    birthDay:"",
+    gender:"",
+    email:"",
+    username:"",
+    password:"",
+    confirmPassword:""
   }
+
+  gender = [
+    {value: 'male', viewValue: 'Male'},
+    {value: 'female', viewValue: 'Female'}
+    
+  ];
   constructor(private registerService:RegisterService) { 
 
   }

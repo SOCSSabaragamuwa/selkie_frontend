@@ -41,6 +41,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { LoginService } from './login/login.service';
 import { RegisterComponent } from './register/register.component';
 import { RegisterService } from './register/register.service';
+import {MatSelectModule} from '@angular/material/select';
+import { EqualValidatorDirective } from './register/equal-validator.directive';
 
 
 
@@ -74,7 +76,8 @@ import { RegisterService } from './register/register.service';
     AdminComponent,
     AdminhomeComponent,
     AdmineventlistComponent,
-    RegisterComponent
+    RegisterComponent,
+    EqualValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,8 @@ import { RegisterService } from './register/register.service';
     MatNativeDateModule,
     MatListModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ],
   providers: [
     EventService,
