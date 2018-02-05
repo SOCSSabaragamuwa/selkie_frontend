@@ -1,0 +1,21 @@
+<div class="container-fluid custom-style-container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <button mat-raised-button color="primary" (click)="addEvent()">Add evevnt</button>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-7">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-5">
+      <app-topevents></app-topevents>
+    </div>
+
+  </div>
+
+</div>
