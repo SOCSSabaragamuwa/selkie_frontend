@@ -1,20 +1,57 @@
 <div class="container-fluid custom-style">
-  <div class="row">
-    <div class="col-md-4 card">
-      <mat-list role="list">
-        <mat-list-item  role="listitem">Event &nbsp;
-            <button mat-raised-button color="primary" (click)="showEvent()">Show Events</button>&nbsp;
-            <button mat-raised-button color="primary" (click)="addEvent()">Add Events</button>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item role="listitem">User</mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item role="listitem">Item 3</mat-list-item>
-        <mat-divider></mat-divider>
-      </mat-list>
+  <div class="row custom">
+    <div id="admin-panel" class="col-xs-12 col-sm-3 col-md-2 card-panel">
+
+        <div  class="col-xs-12 col-sm-7 col-md-7 list-item indicator">
+           ------
+         </div>
+      <div id="list-item-one" class="col-xs-3 col-sm-7 col-md-7 list-item">
+         &nbsp; Event
+      </div>
+
+      <div class="col-xs-9 col-sm-5 col-md-5 list-item-icon-one icon">
+        <i class="fa fa-calendar-o"></i>
+      </div>
+
+
+
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 sub-list-one list-item " (click)="addEvent()">
+         &nbsp; Add Event
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 sub-list-one list-item " (click)="showEvent()">
+        &nbsp; Show Event
+        <hr>
+      </div>
+
+      <div id="list-item-two" class=" col-xs-3 col-sm-7 col-md-7 list-item">
+        &nbsp; User &nbsp; &nbsp; &nbsp;
+        
+      </div>
+
+      <div class="col-xs-9 col-sm-5 col-md-5 list-item-icon-two icon">
+          <i class="fa fa-users"></i>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 sub-list-two list-item ">
+        &nbsp; &nbsp; Add User
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 sub-list-two list-item ">
+       &nbsp; Show User
+       <hr>
+      </div>
+      <div class="col-xs-3 col-sm-12 col-md-12 list-item ">
+        &nbsp; Event
+      </div>
     </div>
-    <div class="col-md-8">
+
+    <div class=" col-sm-9 col-md-10">
       <router-outlet></router-outlet>
     </div>
   </div>
+
+
+
+
 </div>

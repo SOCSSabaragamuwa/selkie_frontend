@@ -4,7 +4,40 @@
       <input matInput placeholder="Search" #txtSearch>
     </mat-form-field>
   </form>
-  <div class="col-md-12 card" *ngFor="let item of eventList| searchfilter: 'eventName' : txtSearch.value">
-      Event name:{{item.eventName}}
+  <div class=" col-xs-12 col-sm-12 col-md-12 card" *ngFor="let item of eventList| searchfilter: 'eventName' : txtSearch.value">
+     <div > <h1 class="event-name">{{item.eventName}}</h1></div>
+
+     <div class="col-sm-4 col-md-4 event-info" > <i class="fa fa-map-marker icons"></i>
+      <div>{{item.eventLocation}} </div>
+    </div>
+     <div class=" col-sm-4 col-md-4 event-info "><i class="fa fa-calendar icons"></i>
+      <div>date{{item.date}}</div>
+    </div>
+     <div class=" col-sm-4 col-md-4 event-info"> <i class="fa fa-clock-o icons"></i>
+      <div>
+        name {{item.time}}
+      </div>
+    </div>
+
+     <div class="description"> 
+     
+            
+            <div class="short-description">
+              {{item.shortDes}}
+            </div>
+              
+           
+      
+          
+           <div class="long-description">
+             {{item.longDes}}
+           </div>
+      
+          
+        
+     </div>
+     
+    
+      
   </div>
 </div>

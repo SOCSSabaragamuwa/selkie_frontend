@@ -1,4 +1,17 @@
 .custom-form-style{
 
     margin-top: 100px;
+   
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.register-heading{
+    text-align: center;
+}
+.content-area{
+    min-height: 70vh;
+}
+.register-form{
+    min-height: 70vh;
 }
