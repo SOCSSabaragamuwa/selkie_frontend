@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 declare var $: any
+
 
 @Component({
   selector: 'app-admin',
@@ -8,6 +10,7 @@ declare var $: any
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+
 
   constructor(private router: Router) { }
 
@@ -60,6 +63,7 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['/admin/event']);
   }
   addEvent() {
+
     this.router.navigate(['/admin/event/addevent']);
   }
 

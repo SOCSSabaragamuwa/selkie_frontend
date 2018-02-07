@@ -14,7 +14,9 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminRouting } from './admin/admin.route';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+
 import { UserprofileComponent } from './userprofile/userprofile.component';
+
 
 
 
