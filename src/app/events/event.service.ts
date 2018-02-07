@@ -5,7 +5,6 @@ export class EventService {
   eventList:Eventobj[]=[
     {
     id:1,
-
     eventName:"Hackthon",
     eventLocation:"location",
     date:"asd",
@@ -16,12 +15,10 @@ export class EventService {
      {
       id:2,
       eventName:"FortNight",
-
       eventLocation:"location",
       date:"",
       time:"",
       longDes:"this",
-
       shortDes:"second fort night"
      },
 
