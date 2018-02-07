@@ -5,23 +5,26 @@ export class EventService {
   eventList:Eventobj[]=[
     {
     id:1,
-    eventName:"EventOne",
+
+    eventName:"Hackthon",
     eventLocation:"location",
-    date:"",
-    time:"",
+    date:"asd",
+    time:"asfa",
     longDes:"this",
-    shortDes:""
+    shortDes:"let me hack"
     },
      {
       id:2,
-      eventName:"EventTwo",
+      eventName:"FortNight",
+
       eventLocation:"location",
       date:"",
       time:"",
       longDes:"this",
-      shortDes:""
+
+      shortDes:"second fort night"
      },
-    // {eventName:"EventTwo"},
+
     // {eventName:"EventThree"}
   ]
 

@@ -1,0 +1,22 @@
+.card{
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-top: 10px;
+    
+}
+.event-name{
+    /* background-color: blue; */
+    margin-top:5px;
+}
+.event-block{
+    margin-bottom: 5px;
+}
+.icons{
+    font-size: 20px;
+}
+.event-container{
+
+    height: 85vh;
+    overflow: scroll;
+    padding-top: 5px;
+}

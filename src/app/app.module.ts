@@ -11,6 +11,8 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -43,6 +45,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterService } from './register/register.service';
 import {MatSelectModule} from '@angular/material/select';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -78,7 +81,10 @@ import { EqualValidatorDirective } from './register/equal-validator.directive';
     AdminhomeComponent,
     AdmineventlistComponent,
     RegisterComponent,
-    EqualValidatorDirective
+    EqualValidatorDirective,
+    UserprofileComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -100,6 +106,8 @@ import { EqualValidatorDirective } from './register/equal-validator.directive';
     MatListModule,
     MatDividerModule,
     MatTabsModule,
+    MatExpansionModule,
+
     MatSelectModule
   ],
   providers: [

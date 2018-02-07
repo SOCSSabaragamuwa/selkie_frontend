@@ -15,6 +15,10 @@ import { AdminRouting } from './admin/admin.route';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { UserprofileComponent } from './userprofile/userprofile.component';
+
+
+
 
 const APP_ROUTE_PROVIDER: Routes = [
 
@@ -24,7 +28,7 @@ const APP_ROUTE_PROVIDER: Routes = [
     {path:'blog',component:BlogComponent},
     {path:'login',component:LoginComponent},
     {path:'admin',component:AdminComponent,children:AdminRouting},
-    {path:'careers',component:CarriersComponent},
+    {path:'user',component:UserprofileComponent},
     {path:'aboutus',component:AboutusComponent},
     {path:'event',component:EventsComponent,children:EventRouting},
     {path:'',redirectTo:'home',pathMatch:'full'},
