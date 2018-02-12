@@ -46,6 +46,13 @@ import { RegisterService } from './register/register.service';
 import {MatSelectModule} from '@angular/material/select';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { UserService } from './userprofile/user.service';
+import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
+
+
+
+
 
 
 
@@ -84,11 +91,14 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     RegisterComponent,
     EqualValidatorDirective,
     UserprofileComponent,
+    UserprofilelistComponent
     
 
 
 
   ],
+   
+    
   imports: [
     BrowserModule,
     routing,
@@ -117,7 +127,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
   providers: [
     EventService,
     LoginService,
-    RegisterService
+    RegisterService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

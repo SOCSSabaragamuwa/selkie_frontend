@@ -15,6 +15,7 @@ import { AdminRouting } from './admin/admin.route';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
 
 
 
@@ -26,6 +27,7 @@ const APP_ROUTE_PROVIDER: Routes = [
 
     
     {path:'home',component:HomeComponent},
+    {path:'userprofile',component:UserprofilelistComponent},
     {path:'register',component:RegisterComponent},
     {path:'blog',component:BlogComponent},
     {path:'login',component:LoginComponent},

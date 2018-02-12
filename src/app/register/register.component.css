@@ -1,6 +1,7 @@
 .custom-form-style{
 
     margin-top: 100px;
+    margin-bottom:30px;
    
 }
 .card{
@@ -14,4 +15,7 @@
 }
 .register-form{
     min-height: 70vh;
+}
+.button-container{
+    margin-bottom: 10px;
 }
