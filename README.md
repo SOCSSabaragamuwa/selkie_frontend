@@ -26,3 +26,8 @@ sudo n stable
 For the latest version:
 
 sudo n latest
+
+you can view the application through this link
+
+https://WThamira.github.io/selkie_frontend/
+
