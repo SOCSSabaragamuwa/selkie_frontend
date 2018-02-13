@@ -28,6 +28,11 @@ export class RegisterComponent implements OnInit {
     {value: 'female', viewValue: 'Female'}
     
   ];
+
+  universities=[
+    {value: 'sabra', viewValue: 'Sabargamuwa'},
+    {value: 'pera', viewValue: 'Peradeniya'}
+  ];
   constructor(private registerService:RegisterService) { 
 
   }

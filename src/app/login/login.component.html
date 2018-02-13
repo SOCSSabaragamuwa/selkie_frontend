@@ -4,7 +4,7 @@
 
         <div class="col-xs-12 col-sm-12 col-md-12 ">
             <div class=" col-xs-10 col-sm-6 col-md-4  col-xs-push-1 col-sm-push-3 col-md-push-4 login-form card">
-                <form class=" example-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <form class=" example-form" (ngSubmit)="onSubmit()" #f="ngForm">
                     <div >
                         <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
                             <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="login.username" #username="ngModel" required>
