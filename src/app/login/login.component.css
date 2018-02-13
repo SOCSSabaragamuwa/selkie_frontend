@@ -1,4 +1,36 @@
 .custom-style{
 
-    margin-top: 100px;
+    height: 100vh;
+    padding-top: 1px;
+    background-color: rebeccapurple;
+    
+}
+.whole{
+   
+    
+    opacity: 0.5;
+
+    /* background-color: red; */
+}
+.custom-row-style{
+    margin-top: 25vh;
+    margin-bottom:50px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.login-form{
+    padding-top:100px;
+    height:400px;
+    border-radius:5px;
+    background-color: white;
+   
+   
+
+    
+}
+.button-container{
+   text-align: center;
 }

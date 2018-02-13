@@ -3,7 +3,6 @@ import { Login } from './login';
 import { LoginService } from './login.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,10 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
 
-
   ngOnInit() {
   }
-
 
   // userLogin(){
   //   this.router.navigate(['/login']);
@@ -32,6 +29,5 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.loginService.sendData(this.login);
   }
-
 
 }

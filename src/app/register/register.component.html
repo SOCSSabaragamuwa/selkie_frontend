@@ -1,11 +1,13 @@
 <div class="container-fluid custom-form-style">
   <div class="row">
-    <div class="col-md-5">
+
+      
+    <div class=" col-xs-12 col-sm-6 col-md-4 col-sm-push-6 col-md-push-8">
       <div class="col-md-12 card register-form">
         <h2 class="col-md-12 register-heading">Register</h2>
         <form class="example-form" (ngSubmit)="onRegister(f)" #f="ngForm">
           <div>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel"
                 required>
 
@@ -32,7 +34,7 @@
           </div>
 
           <div>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.lastName" #lastName="ngModel" required>
 
 
@@ -56,7 +58,7 @@
             </mat-error>
           </div>
 
-          <mat-form-field>
+          <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
             <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="birthDay" [(ngModel)]="register.birthDay" #birthDay="ngModel"
               required>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -79,11 +81,13 @@
 
 
             </mat-error>
+
           </div>
+
           <div>
-            <mat-form-field>
-              <mat-select placeholder="Gender" name="registerName" [(ngModel)]="register.gender" #registerName="ngModel" required>
-                <mat-option *ngFor="let gender of gender" [value]="gender.value">
+            <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
+              <mat-select placeholder="Gender" name="gender" [(ngModel)]="register.gender" #gen="ngModel" required>
+                <mat-option *ngFor="let gender of genders" [value]="gender.value">
                   {{ gender.viewValue }}
                 </mat-option>
               </mat-select>
@@ -91,9 +95,8 @@
           </div>
 
           <div class="col-lg-12">
-            <mat-error *ngIf="registerName.touched">
-              <mat-error *ngIf="registerName.errors?.required">
-
+            <mat-error *ngIf="gen.touched">
+              <mat-error *ngIf="gen.errors?.required">
 
                 Gender is
                 <strong>required</strong>
@@ -103,7 +106,33 @@
 
 
           <div>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
+              <mat-select placeholder="University" name="university" [(ngModel)]="register.university" #uni="ngModel" required>
+                <mat-option *ngFor="let university of universities" [value]="university.value">
+                  {{ university.viewValue }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-lg-12">
+            <mat-error *ngIf="uni.touched">
+              <mat-error *ngIf="uni.errors?.required">
+
+                University is
+                <strong>required</strong>
+              </mat-error>
+            </mat-error>
+          </div>
+
+
+          
+
+
+
+
+          <div>
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="email" matInput placeholder="Email" name="email" [(ngModel)]="register.email" #email="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 
 
@@ -127,7 +156,7 @@
 
 
           <div>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="register.username" #username="ngModel" required
                 pattern="[a-zA-Z][a-zA-Z ]+">
 
@@ -154,7 +183,7 @@
 
 
           <div>
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="register.password" #password="ngModel"
                 required minlength="8" maxlength="20" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})">
 
@@ -180,7 +209,7 @@
 
           <div>
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="password" matInput placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="register.confirmPassword"
                 #confirmPassword="ngModel" required validateEqual="password">
 
@@ -205,23 +234,16 @@
 
             </mat-error>
           </div>
-        
 
 
 
-          <div class="col-lg-12">
-            <button mat-button>Register</button>
+
+          <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 button-container">
+            <button mat-raised-button color="accent">Register</button>
           </div>
         </form>
       </div>
     </div>
-      <div class="col-md-7">
-        <div class="col-md-12 card content-area">
-            content area
-        </div>
-       
-      
-
-    </div>
+    
   </div>
 </div>

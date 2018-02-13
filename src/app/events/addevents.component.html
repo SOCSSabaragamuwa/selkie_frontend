@@ -1,13 +1,11 @@
-
-<h2 class="col-md-12">Add evnts</h2>
-<div class="col-md-12 custom-style card">
+<h2 class=" col-xs-12 col-sm-12 col-md-12 add-event-header">Add Events</h2>
+<div class="col-xs-12 col-sm-12 col-md-12 custom-style card">
 
    
-  <form class="example-form" (ngSubmit)="onSubmit()">
+  <form class="example-form col-xs-12 col-sm-12 col-md-12" (ngSubmit)="onSubmit()">
 
-    <div >
-      <mat-form-field  class="example-full-width">
-
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field  class="example-full-width col-xs-12 col-sm-12 col-md-12">
         <input matInput placeholder="Event Name" name="eventName" [(ngModel)]="eventObj.eventName" #eventName="ngModel" required>
       </mat-form-field>
     </div>
@@ -17,7 +15,7 @@
         <mat-error *ngIf="eventName.touched">
             <mat-error *ngIf="eventName.errors?.required">
     
-                Username is
+                Event Name
                 <strong>required</strong>
             </mat-error>
             <!-- <mat-error *ngIf="username.errors?.pattern">
@@ -35,17 +33,17 @@
 
 
 
-    <div>
-      <mat-form-field class="example-full-width" >
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field class="example-full-width  col-xs-12 col-sm-12 col-md-12" >
         <input matInput placeholder="Event Location" value="Event Location" name="eventLocation" [(ngModel)]="eventObj.eventLocation" #eventLocation="ngModel" required>
       </mat-form-field>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 ">
         <mat-error *ngIf="eventLocation.touched">
             <mat-error *ngIf="eventLocation.errors?.required">
     
-                Location is
+                A Location is
                 <strong>required</strong>
             </mat-error>
             <!-- <mat-error *ngIf="username.errors?.pattern">
@@ -58,8 +56,8 @@
     </div>
 
 
-    <div>
-      <mat-form-field>
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field class=" col-xs-12 col-sm-12 col-md-12">
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="date" [(ngModel)]="eventObj.date" #date="ngModel" required>
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
@@ -82,8 +80,8 @@
     </div>
     
 
-    <div>
-      <mat-form-field class="example-full-width">
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
         <input type="time" matInput placeholder="Time" value="Event time" name="time" [(ngModel)]="eventObj.time" #time="ngModel" required>
       </mat-form-field>
     </div>
@@ -103,8 +101,8 @@
     
         </mat-error>
     </div>
-    <div>
-      <mat-form-field>
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field  class=" col-xs-12 col-sm-12 col-md-12">
         <textarea matInput placeholder="Short Description " name="shortDes" [(ngModel)]="eventObj.shortDes" #shortDes="ngModel" required></textarea>
       </mat-form-field>
     </div>
@@ -124,8 +122,8 @@
         </mat-error>
     </div>
 
-    <div>
-      <mat-form-field>
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+      <mat-form-field class=" col-xs-12 col-sm-12 col-md-12">
         <textarea matInput placeholder="Long Description"  name="longDes" [(ngModel)]="eventObj.longDes" #longDes="ngModel" required></textarea>
       </mat-form-field>
     </div>
@@ -134,7 +132,7 @@
         <mat-error *ngIf="longDes.touched">
             <mat-error *ngIf="longDes.errors?.required">
     
-                Short Description
+                Long Description 
                 <strong>required</strong>
             </mat-error>
             <!-- <mat-error *ngIf="username.errors?.pattern">
@@ -147,7 +145,9 @@
     </div>
 
     
-
-    <button mat-raised-button color="warn">submit</button>
+    <div class="col-xs-2"> 
+        <button  mat-raised-button color="warn">Add event</button>
+    </div>
+   
   </form>
 </div>

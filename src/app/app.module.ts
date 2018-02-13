@@ -15,7 +15,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,9 +42,18 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { LoginService } from './login/login.service';
 import { RegisterComponent } from './register/register.component';
 import { RegisterService } from './register/register.service';
+
 import {MatSelectModule} from '@angular/material/select';
 import { EqualValidatorDirective } from './register/equal-validator.directive';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import { UserService } from './userprofile/user.service';
+import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
+
+
+
+
+
 
 
 
@@ -83,9 +91,14 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     RegisterComponent,
     EqualValidatorDirective,
     UserprofileComponent,
+    UserprofilelistComponent
     
 
+
+
   ],
+   
+    
   imports: [
     BrowserModule,
     routing,
@@ -105,15 +118,17 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     MatNativeDateModule,
     MatListModule,
     MatDividerModule,
+
     MatTabsModule,
     MatExpansionModule,
-
     MatSelectModule
+
   ],
   providers: [
     EventService,
     LoginService,
-    RegisterService
+    RegisterService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

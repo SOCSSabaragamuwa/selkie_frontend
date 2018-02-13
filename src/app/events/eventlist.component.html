@@ -4,7 +4,9 @@
       <input matInput placeholder="Search" #txtSearch>
     </mat-form-field>
   </form>
-
+  <div class="col-md-12 button-container">
+    <button class="col-md-2" mat-raised-button color="primary" (click)="addEvent()">Add evevnt</button>
+  </div>
   <div class=" col-xs-12 col-sm-12 col-md-12 card" *ngFor="let item of eventList| searchfilter: 'eventName' : txtSearch.value">
      <div > <h1 class="event-name">{{item.eventName}}</h1></div>
 
@@ -40,6 +42,5 @@
      
     
       
-
   </div>
 </div>
