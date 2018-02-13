@@ -30,6 +30,7 @@ const APP_ROUTE_PROVIDER: Routes = [
     {path:'userprofile',component:UserprofilelistComponent},
     {path:'register',component:RegisterComponent},
     {path:'blog',component:BlogComponent},
+    {path:'news',component:NewsComponent},
     {path:'login',component:LoginComponent},
     {path:'admin',component:AdminComponent,children:AdminRouting},
     {path:'user',component:UserprofileComponent},
