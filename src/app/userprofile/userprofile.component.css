@@ -1,0 +1,85 @@
+.custom-style-container{
+    margin-top:100px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.short-profile{
+    height: 600px;
+    padding: 0px;
+}
+
+.picture-section{
+
+    height: 60%;
+    background-image: url('../../assets/5.jpg');
+    background-size:100% 100%;
+	background-repeat: no-repeat;
+
+    /* background-color: red; */
+}
+.data-section{
+    height:40%;
+    padding-top:80px;
+    /* background-color: blue; */
+    text-align: center;
+}
+.short-profile-heading{
+    margin: 0px;
+}
+.img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border:3px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.picture-container{
+   
+    margin-top:275px;
+    text-align: center;
+    /* background-color:red; */
+    height: 2px;
+}
+.form{
+    margin-top: 30px;
+}
+
+.info-section{
+
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+.info-container{
+
+    padding-top:15px;
+    padding-bottom:15px;
+}
+.info{
+    margin:0px;
+}
+
+.custom-btn-color{
+    background-color:lightgreen;
+}
+.button-conatiner{
+
+    padding-top:10px; 
+}
+
+
+
+@media only screen and (max-width:991px) {
+    .short-profile{
+        height:400px;
+    }
+
+    .picture-container{
+   
+        margin-top:150px;
+        text-align: center;
+        /* background-color:red; */
+        height: 2px;
+    }
+    }

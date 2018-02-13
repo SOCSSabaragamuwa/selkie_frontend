@@ -1,6 +1,5 @@
 .custom-style{
 
-
     margin-top: 50px;
     
 }
@@ -9,6 +8,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     height: 100vh; 
     padding: 0px;
+  
     
 
 }
@@ -51,19 +51,19 @@ display:none;
 
     .card-panel{
 
-    background-color: #1e282c;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height:6vh; 
+  
+   
+    height:50px; 
     padding: 0px;
-    overflow: hidden;
+    overflow:hidden;
+   
+    z-index: 1;
 
     }
     .card-panel:hover{
-       
-        height:auto;
-        transition: 2s;
-    
+     height: auto;
         }
+        
     
     
     .indicator{

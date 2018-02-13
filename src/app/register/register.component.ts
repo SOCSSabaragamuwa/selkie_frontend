@@ -9,6 +9,7 @@ import { RegisterService } from './register.service';
 })
 export class RegisterComponent implements OnInit {
   register:Register={
+
     firstName:"",
     lastName:"",
     birthDay:"",
@@ -16,10 +17,13 @@ export class RegisterComponent implements OnInit {
     email:"",
     username:"",
     password:"",
-    confirmPassword:""
+    confirmPassword:"",
+    university:"",
+    faculty:"",
+    department:""
   }
 
-  gender = [
+  genders = [
     {value: 'male', viewValue: 'Male'},
     {value: 'female', viewValue: 'Female'}
     
