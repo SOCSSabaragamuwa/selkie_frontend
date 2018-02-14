@@ -1,35 +1,33 @@
 .header{
-
-    text-align: center;
+  text-align: center;
 }
 
 .container-fluid-style{
-
-    margin-top: 40px;
+ margin-top: 40px;
 }
 
 .content{
-    text-align: center;
-    padding:10px;
+text-align: center;
+ padding:10px;
 }
-/* .pallet{
-    background-color: red;
-} */
+
+
 
 .card{
-    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.2);
-    margin-bottom:30px;
-    text-align: center;
+ box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.2);
+ margin-bottom:30px;
+ text-align: center;
 }
+
 .nav-option li button {
-    /* padding: 1px; */
-margin-top:10px;
+/* padding: 1px; */
+ margin-top:10px;
 }
 
 .recent-carrers{
-    height: 50vh;
+ height: 50vh;
 }
+
 .car{
-    margin-bottom:10px;
-    
+ margin-bottom:10px;   
 }

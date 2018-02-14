@@ -1,25 +1,22 @@
 .card{
-
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin-top:10px;
-    margin-bottom:10px;
-    background-color:cornsilk;
-   
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ margin-top:10px;
+ margin-bottom:10px;
+ background-color:cornsilk;  
 }
 
 .event-name{
-    text-align: center;
+text-align: center;
 }
 
 .icons{
-
-    font-size: 30px;
+ font-size: 30px;
 }
 .event-info{
-    text-align: center;
+ text-align: center;
 }
 .description{
-    margin-top:100px;
-    margin-bottom: 50px;
-    text-align: center;
+ margin-top:100px;
+ margin-bottom: 50px;
+ text-align: center;
 }

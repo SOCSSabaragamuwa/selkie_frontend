@@ -1,78 +1,63 @@
 .custom-style{
-
-    margin-top: 50px;
+ margin-top: 50px;
     
 }
+
 .card-panel{
-    background-color: #1e282c;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height: 100vh; 
-    padding: 0px;
-  
-    
-
+ background-color: #1e282c;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ height: 100vh; 
+ padding: 0px;
 }
+
 .list-item{
-    margin-top:5px;
-    height:50px;
-    padding: 10px;
-    color: white;
-    /* background-color: red; */
+ margin-top:5px;
+ height:50px;
+ padding: 10px;
+ color: white;
+/* background-color: red; */
 }
-
-
-   
-
 
 .sub-list-one{
-display:none;
+ display:none;
 }
 
 .sub-list-two{
-    display:none;
+ display:none;
 }
 
 .icon{
-
-    margin-top:5px;
-    height:50px;
-    padding: 10px;
-    color: white;
+ margin-top:5px;
+ height:50px;
+ padding: 10px;
+ color: white;
 }
+
 .indicator{
-    text-align: center;
-    visibility: hidden;
-    font-weight:25px;
-    height: 0px;
+ text-align: center;
+ visibility: hidden;
+ font-weight:25px;
+ height: 0px;
 }
 
     
 @media only screen and (max-width: 767px) {
 
-    .card-panel{
+ .card-panel{
+  height:50px; 
+  padding: 0px;
+  overflow:hidden;
+  z-index: 1;
+}
 
-  
-   
-    height:50px; 
-    padding: 0px;
-    overflow:hidden;
-   
-    z-index: 1;
+ .card-panel:hover{
+  height: auto;
+}
 
-    }
-    .card-panel:hover{
-     height: auto;
-        }
-        
-    
-    
-    .indicator{
-       
-            visibility: visible;
-            height:auto;
-        }
-    
-    
+.indicator{     
+visibility: visible;
+height:auto;
+ }   
 }
 
 

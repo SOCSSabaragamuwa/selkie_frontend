@@ -1,68 +1,63 @@
 .footer-block{
-
-    text-align: center;
-   color:grey;
+ text-align: center;
+ color:grey;
 }
 
 .footer-block h4{
-
-    text-align: center;
-   color:white;
+ text-align: center;
+ color:white;
 }
 .footer{
-    
-    padding-top:20px; 
-    padding-bottom:20px;
-    font-family:"Raleway";
-    background-color:  #111111;
-    animation: 2s ease-out 0s 1 captionAnimation;
+ padding-top:20px; 
+ padding-bottom:20px;
+ font-family:"Raleway";
+ background-color:  #111111;
+ animation: 2s ease-out 0s 1 captionAnimation;
 }
 
 .horizontal-line{
-    
-    border-top: 1px solid #8c8b8b;
+ border-top: 1px solid #8c8b8b;
 }
+
 .line-two{
-    width:40%;
-    opacity: 0.8;
+ width:40%;
+ opacity: 0.8;
 }
+
 .line-one{
-    width:80%;
+ width:80%;
 }
+
 .line-container{
-    padding-left: 20%;
-    padding-right: 20%;
+ padding-left: 20%;
+ padding-right: 20%;
 }
+
 .line-container p{
-
-    text-align: center;
-    color: white;
+ text-align: center;
+ color: white;
 }
 
 
-.custom-footer-style{
 
-    /* margin-top:10px; */
-
-}
 .social-media-icon{
-    font-size:40px;
-    opacity: 0.5;
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: 1s;
+ font-size:40px;
+ opacity: 0.5;
+ color: white;
+ text-decoration: none;
+ margin-left: 10px;
+ margin-right: 10px;
+ transition: 1s;
 }
 .social-media-icon-container{
-    text-align: center;
+ text-align: center;
 }
 .social-media-icon:hover{
-   opacity: 1;
-   transition: 1s;
+ opacity: 1;
+ transition: 1s;
 }
 .social-media-caption{
-    color: white;
+ color: white;
 }
 @keyframes captionAnimation{
     0% {

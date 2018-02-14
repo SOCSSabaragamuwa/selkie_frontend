@@ -1,22 +1,15 @@
 
 
-.custom-style-carsouel{
-
-    
-    padding-left: 15%;
-    padding-right: 15%;
-    /* margin-top: 60px; */
-    animation: 2s ease-out 0s 1 growFromSmall;
-    
-  
-    
-
+.custom-style-carsouel{ 
+ padding-left: 15%;
+ padding-right: 15%;
+/* margin-top: 60px; */
+ animation: 2s ease-out 0s 1 growFromSmall;
 }
 
 
 .custom-caption-style{
-
-    animation: 2s ease-out 0s 1 captionAnimation;
+  animation: 2s ease-out 0s 1 captionAnimation;
 }
 
 
@@ -28,10 +21,8 @@
 
   .custom-style-carsouel{
     padding-left: 0%;
-    padding-right: 0%;
-    
+    padding-right: 0%; 
   }
-
 }
 
 
