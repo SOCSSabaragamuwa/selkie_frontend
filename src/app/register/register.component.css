@@ -1,9 +1,13 @@
+.container-fluid{
+   
+}
 .custom-form-style{
  margin-top: 100px;
  margin-bottom:30px;
    
 }
 .card{
+    background-color: aliceblue;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .register-heading{
@@ -18,3 +22,43 @@
 .button-container{
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width:767px) {
+    .register-logo-icon{
+        transform: translateY(2);
+        transform: scale(0.9);
+       
+        /* margin-left:50%; */
+    }
+
+    .logo-container{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:648px) {
+    .register-logo-icon{
+        
+        transform: scale(0.8);
+        /* margin-left:50%; */
+    }
+
+    
+}
+
+@media only screen and (max-width:517px) {
+    .register-logo-icon{
+        
+        transform: scale(1);
+        /* margin-left:50%; */
+    }
+
+    .logo-container{
+        text-align: center;
+    }
+
+    /* .register-form{
+        transform: scale(0.5);
+    } */
+}
+
