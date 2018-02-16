@@ -4,8 +4,38 @@
 }
 .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /* width:800px; */
+
 }
 .picture-container{
 
     background-color: red;
+}
+.card img {
+    width:100px;
+    height: 100px;
+}
+
+.card[_ngcontent-c4]{
+    height:100px;
+}
+mat-expansion-panel-header[_ngcontent-c4]{
+    height: 123px;
+}
+.mat-expansion-panel-header{
+    padding:64px 24px;
+    
+}
+.card[_ngcontent-c4][_ngcontent-c4]{
+    height: 800px;
+    padding-top: 20px;
+}
+.jumbotron{
+    padding: 10px;
+}
+.mat-expansion-panel-body{
+    padding: 3px 0px 0px;
+}
+.jumbotron[_ngcontent-c4]{
+padding:24px;
 }
