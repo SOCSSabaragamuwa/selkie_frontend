@@ -3,12 +3,14 @@ import {Routes} from '@angular/router';
 import { AddeventsComponent } from './addevents.component';
 
 import { EventlistComponent } from './eventlist.component';
+import { EditeventComponent } from './editevent.component';
 
 
 
 export const EventRouting: Routes = [
   { path: '', component: EventlistComponent},
-  { path: 'add', component: AddeventsComponent}
-
+  { path: 'add', component: AddeventsComponent},
+  
+  
   
 ];
