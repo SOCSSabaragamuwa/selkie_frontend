@@ -1,16 +1,95 @@
 <div class="custom-spacer">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-12 card">
-          <div class="col-md-4 picture-container">
-            red
-          </div>
-          <div class="col-md-8">
-            info section
-          </div>
+      <h1>User Profile</h1><br>
+      <div class="example-container">
+         
+        <div class="col-lg-12 card">
+            <mat-accordion>
+         
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                
+                    <mat-panel-title>
+                      
+                      <img src="../assets/images/user2.jpg" alt="user">
+                    </mat-panel-title>
+                  
+                    <mat-panel-description>
+                    User Name <br><br>
+                    Email<br><br>
+
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div class="mat-expansion-panel-body">
+          
+                      <div _ngcontent-c9="" class="jumbotron ">
+                        
+                            <div class="col-md-6">
+                                <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+                                Personal Details <br>
+                                <mat-divider></mat-divider><br>
+                                Name: <br>
+                                BOD: <br>
+                                Gender <br><br>
+                            </div>
+                            <div class="col-md-6">
+                                <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+                                University Details <br>
+                                <mat-divider></mat-divider><br>
+                                Faculty: <br>
+                                Department: <br>
+                                Degree program <br><br>
+                            </div>
+                         
+                          <button _ngcontent-c9="" class="btn btn-danger">Delete</button>
+                          <button _ngcontent-c9="" class="btn btn-success ">Edit</button>
+                      </div>
+                      
+                    </div>
+                     
+                      
+                   </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <img src="../assets/images/user2.jpg" alt="user">
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        User Name <br><br>
+                        Email<br><br>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <div _ngcontent-c9="" class="jumbotron ">
+                        
+                      <div class="col-md-6">
+                          <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+                          Personal Details <br>
+                          <mat-divider></mat-divider><br>
+                          Name: <br>
+                          BOD: <br>
+                          Gender <br><br>
+                      </div>
+                      <div class="col-md-6">
+                          <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+                          University Details <br>
+                          <mat-divider></mat-divider><br>
+                          Faculty: <br>
+                          Department: <br>
+                          Degree program <br><br>
+                      </div>
+                   
+                    <button _ngcontent-c9="" class="btn btn-danger">Delete</button>
+                    <button _ngcontent-c9="" class="btn btn-success ">Edit</button>
+                </div>
+                  
+                </mat-expansion-panel>
+              </mat-accordion>
+         
         </div>
-      </div>
+      
     </div>
   </div>
 
