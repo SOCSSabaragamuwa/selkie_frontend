@@ -5,20 +5,20 @@ export class EventService {
   eventList:Eventobj[]=[
     {
     id:1,
-    eventName:"Hackthon",
-    eventLocation:"location",
-    date:"asd",
-    time:"asfa",
-    longDes:"this",
-    shortDes:"let me hack"
+    eventName:"Let Me Hack ",
+    eventLocation:"Sabaragamuwa university of Srilanka",
+    date:"24/2/2018",
+    time:"9.00am",
+    longDes:"Platform hackthon",
+    shortDes:"unique hacthon"
     },
      {
       id:2,
-      eventName:"FortNight",
-      eventLocation:"location",
-      date:"",
-      time:"",
-      longDes:"this",
+      eventName:"Fort Night",
+      eventLocation:"Sabaragamuwa university of Srilanka",
+      date:"9/5/2018",
+      time:"6.00pm",
+      longDes:"Introduction to new tech and ha a soft skill sesion",
       shortDes:"second fort night"
      },
 
@@ -33,6 +33,15 @@ export class EventService {
   }
   getAllEventData(){
     return this.eventList;
+  }
+
+  getEventDetails(eventId:any){
+    for(let i=0;i<this.eventList.length;i++){
+      if(this.eventList[i].id==eventId){
+        console.log(this.eventList[i]);
+        return this.eventList[i];
+      }
+    }
   }
 
 }
