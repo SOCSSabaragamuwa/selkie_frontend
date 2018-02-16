@@ -49,6 +49,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { UserService } from './userprofile/user.service';
 import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
+import { ItemlistPipe } from './register/itemlist.pipe';
 
 
 
@@ -91,7 +92,8 @@ import { UserprofilelistComponent } from './userprofile/userprofilelist.componen
     RegisterComponent,
     EqualValidatorDirective,
     UserprofileComponent,
-    UserprofilelistComponent
+    UserprofilelistComponent,
+    ItemlistPipe
     
 
 
