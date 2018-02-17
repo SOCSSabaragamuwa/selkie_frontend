@@ -1,0 +1,65 @@
+.card{
+
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ 
+ 
+
+}
+.event-card{
+
+}
+
+.summary-card-container{
+    margin-top: 30px;
+}
+
+.summary-heading{
+    background-color: cadetblue;
+    margin:0px;
+    height:40px;
+    color:white;
+    padding:10px;
+}
+
+.summary-pannel{
+
+    padding: 0px;
+}
+.user-heading{
+    background-color: dodgerblue;
+    margin:0px;
+    height:40px;
+    color:white;
+    padding:10px;
+    text-align: center;
+}
+
+.event-heading{
+    background-color: firebrick;
+    margin:0px;
+    height:40px;
+    color:white;
+    padding:10px;
+    text-align: center;
+}
+.event-card{
+    padding: 0px;
+    height: 350px;
+    background-image: url('../../assets/Events.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.user-card{
+    padding:0px;
+    height: 350px;
+    background-image: url('../../assets/users.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.admin-home-container{
+
+    margin-top:40px;
+}

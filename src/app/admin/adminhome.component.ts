@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Evvntobj } from '../events/evvntobj';
+import { EventService } from '../events/event.service';
 
 @Component({
   selector: 'app-adminhome',
@@ -8,7 +10,14 @@ import { Router } from '@angular/router';
 })
 export class AdminhomeComponent implements OnInit {
 
+  constructor(private eventService:EventService){
+
+  }
+   eventList:Evvntobj[]=[];
   ngOnInit() {
+
+    this.eventList=this.eventService.getAllEventData();
+    console.log(this.eventList);
   }
   
 
