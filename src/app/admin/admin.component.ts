@@ -67,5 +67,11 @@ export class AdminComponent implements OnInit {
 
     this.router.navigate(['/admin/event/addevent']);
   }
+  addUsers(){
+    this.router.navigate(['/admin/event/adduser']);
+  }
+  showEventMain(){
+    
+  }
 
 }

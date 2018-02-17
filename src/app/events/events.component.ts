@@ -18,6 +18,7 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
 
+
     console.log("hellow");
     this.subscription = this.route.params.subscribe(
       (params: any) => {
@@ -27,6 +28,7 @@ export class EventsComponent implements OnInit {
       // console.log(this.eventobj);
       
       });
+
   }
 
   addEvent(){

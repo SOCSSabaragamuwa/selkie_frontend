@@ -1,8 +1,6 @@
-.container-fluid{
-   
-}
+
 .custom-form-style{
- margin-top: 100px;
+ margin-top: 25px;
  margin-bottom:30px;
    
 }
@@ -60,5 +58,15 @@
     /* .register-form{
         transform: scale(0.5);
     } */
+}
+
+@media only screen and (max-width:768px) {
+
+    .custom-form-style{
+        margin-top: 100px;
+        
+          
+       }
+    
 }
 
