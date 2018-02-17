@@ -1,5 +1,41 @@
+<div class="col-xs-12 col-sm-12 col-md-12 admin-home-container">
+  <div class=" col-xs-12 col-sm-6 col-md-6  users-card-container">
+    <div class="col-md-12 card user-card">
+      <h4 class="user-heading">User</h4>
+    </div>
+  </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-12">
-          hellow world
-        </div>
-  
+  <div class=" col-xs-12 col-sm-6 col-md-6 event-card-container">
+    <div class="col-md-12 card event-card">
+      <h4 class="event-heading">Events</h4>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 summary-card-container">
+    <div class="col-md-12 card summary-pannel">
+      <h4 class="summary-heading">Summary</h4>
+
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Event</th>
+              <th>Day</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of eventList">
+              <td>_=.</td>
+              <td>{{item.eventName}}</td>
+              <td>{{item.date}}</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
