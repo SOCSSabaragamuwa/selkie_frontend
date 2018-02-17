@@ -50,6 +50,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { UserService } from './userprofile/user.service';
 import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
 import { ItemlistPipe } from './register/itemlist.pipe';
+import { EditeventComponent } from './events/editevent.component';
+
 
 
 
@@ -93,7 +95,9 @@ import { ItemlistPipe } from './register/itemlist.pipe';
     EqualValidatorDirective,
     UserprofileComponent,
     UserprofilelistComponent,
-    ItemlistPipe
+    ItemlistPipe,
+    EditeventComponent,
+   
     
 
 

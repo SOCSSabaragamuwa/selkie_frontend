@@ -18,15 +18,7 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log("hellow");
-    this.subscription = this.route.params.subscribe(
-      (params: any) => {
-
-        this.eventid = params['id'];
-     this.eventobj=  this.eventService.getEventDetails(this.eventid);
-      // console.log(this.eventobj);
-      
-      });
+   
   }
 
   addEvent(){

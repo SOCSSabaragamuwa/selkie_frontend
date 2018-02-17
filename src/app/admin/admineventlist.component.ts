@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Eventobj } from '../events/eventobj';
 import { EventService } from '../events/event.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admineventlist',
@@ -10,7 +11,7 @@ import { EventService } from '../events/event.service';
 export class AdmineventlistComponent implements OnInit {
 
   eventList:Eventobj[]=[];
-  constructor(private eventService:EventService) { }
+  constructor(private eventService:EventService,private router:Router) { }
 
   ngOnInit() {
 
@@ -18,4 +19,9 @@ export class AdmineventlistComponent implements OnInit {
     console.log(this.eventList);
   }
 
+  eventEdit(id:any){
+    console.log(id);
+    this.router.navigate(['admin/event/edit',id]);
+
+  }
 }
