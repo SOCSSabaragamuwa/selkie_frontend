@@ -5,7 +5,7 @@ width:60%;
 height:15%;
 margin: auto;
 margin-top: 80px; 
-animation: 2s ease-out 0s 1 slide-from-right;
+animation: 2s ease-out 0s 1 slide-from-bottom;
 font-family: 'Octin Prision';
     
 }
@@ -86,7 +86,17 @@ font-family: 'Octin Prision';
         transform: translateX(0);
         opacity: 1;
     }
-
+}
+@keyframes slide-from-bottom{
+        0%{
+            transform: translateY(100%);
+            opacity: 0;
+        }
+    
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
 
 }
 @keyframes opactiy-effect{
