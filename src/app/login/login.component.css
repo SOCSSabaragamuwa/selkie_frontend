@@ -9,12 +9,10 @@
 }
 
 .custom-row-style{
- margin-top: 25vh;
+ margin-top: 70px;
  margin-bottom:50px;
-}
-
-.card{
- box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ padding: auto;
+  
 }
 
 .login-form{
@@ -30,26 +28,31 @@
 
 .box{
   padding-top:10px;
-  min-height: 435px;
-  border:3px solid #E74C3C;
-  
+  min-height: 500px;
+ 
 }
 
 .login_icon{
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
+   
 }
 
 .slide{ 
-
-   min-height: 435px;
+    background-image: url(../../assets/slide2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-attachment: fixed;
+   min-height: 500px;
+   padding-left: 0px;
 }
 .slider{
    padding: 0px;
    width:100%;
-   height: 430px; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+   height: 500px; 
+  
+ 
 }
