@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from './user';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-userdetail',
@@ -7,13 +9,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./userdetail.component.css']
 })
 export class UserdetailComponent implements OnInit {
-id=1;
-  constructor( private router:Router) { }
+  
+  userList:User;
+  constructor( private router:Router,private userService:UserService) { }
 
   ngOnInit() {
+
+    this.userList=this.userService.getUserList();
+    console.log(this.userList);
+  
   }
 userEdit(id:any){
 
-  this.router.navigate(['admin/event/edit',id]);
+  this.router.navigate(['user/edit',id]);
 }
 }
