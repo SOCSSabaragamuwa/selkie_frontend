@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
+import { UserRouting } from './userprofile/user.routes';
 
 
 
@@ -33,7 +34,7 @@ const APP_ROUTE_PROVIDER: Routes = [
     {path:'news',component:NewsComponent},
     {path:'login',component:LoginComponent},
     {path:'admin',component:AdminComponent,children:AdminRouting},
-    {path:'user',component:UserprofileComponent},
+    {path:'user',component:UserprofileComponent,children:UserRouting},
     {path:'aboutus',component:AboutusComponent},
     {path:'event',component:EventsComponent,children:EventRouting},
     {path:'',redirectTo:'home',pathMatch:'full'},
