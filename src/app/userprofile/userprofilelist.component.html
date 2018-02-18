@@ -5,7 +5,7 @@
       <div class="example-container">
          
         <div class="col-lg-12 card">
-            <mat-accordion>
+            <mat-accordion *ngFor="let user of usersList">
          
                 <mat-expansion-panel (opened)="panelOpenState = true"
                                      (closed)="panelOpenState = false">
@@ -17,8 +17,8 @@
                     </mat-panel-title>
                   
                     <mat-panel-description>
-                    User Name <br><br>
-                    Email<br><br>
+                   <!-- {{user.first_name}}  <br><br> -->
+                   {{user.email}}<br><br>
 
                     </mat-panel-description>
                   </mat-expansion-panel-header>
@@ -30,7 +30,8 @@
                                 <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
                                 Personal Details <br>
                                 <mat-divider></mat-divider><br>
-                                Name: <br>
+                                <!-- First Name:   {{user.first_name}} <br>
+                                Last Name:   {{user.last_name}} <br> -->
                                 BOD: <br>
                                 Gender <br><br>
                             </div>
@@ -38,9 +39,13 @@
                                 <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
                                 University Details <br>
                                 <mat-divider></mat-divider><br>
-                                Faculty: <br>
-                                Department: <br>
-                                Degree program <br><br>
+                                <!-- Batch:{{user.batch}} <br> -->
+                                <!-- <div *ngIf="user.faculty.name">
+                                  Faculty: {{user.faculty.name}} <br>
+                                </div> -->
+                               
+                                <!-- Department:{{user.department.name}} <br>
+                                Degree program :{{user.degree.name}}<br><br> -->
                             </div>
                          
                           <button _ngcontent-c9="" class="btn btn-danger">Delete</button>
@@ -51,41 +56,7 @@
                      
                       
                    </mat-expansion-panel>
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                                     (closed)="panelOpenState = false">
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        <img src="../assets/images/user2.jpg" alt="user">
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        User Name <br><br>
-                        Email<br><br>
-                    </mat-panel-description>
-                  </mat-expansion-panel-header>
-                  <div _ngcontent-c9="" class="jumbotron ">
-                        
-                      <div class="col-md-6">
-                          <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
-                          Personal Details <br>
-                          <mat-divider></mat-divider><br>
-                          Name: <br>
-                          BOD: <br>
-                          Gender <br><br>
-                      </div>
-                      <div class="col-md-6">
-                          <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
-                          University Details <br>
-                          <mat-divider></mat-divider><br>
-                          Faculty: <br>
-                          Department: <br>
-                          Degree program <br><br>
-                      </div>
-                   
-                    <button _ngcontent-c9="" class="btn btn-danger">Delete</button>
-                    <button _ngcontent-c9="" class="btn btn-success ">Edit</button>
-                </div>
-                  
-                </mat-expansion-panel>
+               
               </mat-accordion>
          
         </div>
