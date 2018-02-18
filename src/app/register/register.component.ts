@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Register } from './register';
 import { RegisterService } from './register.service';
+import { MatDialog } from '@angular/material';
 declare var $: any;
 @Component({
   selector: 'app-register',
@@ -9,6 +10,10 @@ declare var $: any;
 })
 export class RegisterComponent implements OnInit {
 
+  
+  facChooser:boolean=false;
+  depChooser:boolean=false;
+  degChooser:boolean=false;
   facultyID;
   departmentID;
   departments: any[] = [{  value: 'not selected', viewValue: 'Please select a faculty' }];
@@ -51,9 +56,10 @@ export class RegisterComponent implements OnInit {
 
   faculties = [
     { facId: 1, value: 'fac', viewValue: 'Apllied sciences' },
-    { facId: 2, value: 'fam', viewValue: 'Managment' }
+    { facId: 2, value: 'fam', viewValue: 'Managment' },
+    
   ];
-  constructor(private registerService: RegisterService) {
+  constructor(private registerService: RegisterService,public dialog: MatDialog) {
 
   }
 
@@ -106,6 +112,25 @@ export class RegisterComponent implements OnInit {
     }
     console.log("hi my name");
   }
+
+  
+  openFacChooser(){
+    return this.facChooser=!this.facChooser;
+
+  }
+
+  openDepChooser(){
+    return this.depChooser=!this.depChooser;
+
+  }
+
+  openDegChooser(){
+    return this.degChooser=!this.degChooser;
+
+  }
+    
+  
+
 
   
 
