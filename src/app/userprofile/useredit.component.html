@@ -1,0 +1,57 @@
+<div class="col-xs-12 col-sm-12 col-md-12 ">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 card ">
+  <form>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+       <mat-form-field class="example-full-width col-xs-12 col-sm-6 col-md-6">
+         <input type="text" matInput placeholder="firstName" name="firstName" required>
+ 
+ 
+       </mat-form-field>
+     </div>
+ 
+     <div class="col-xs-12 col-sm-12 col-md-12">
+       <mat-form-field class="example-full-width col-xs-12 col-sm-6 col-md-6">
+         <input type="text" matInput placeholder="lastName" name="lasttName" required>
+ 
+ 
+       </mat-form-field>
+     </div>
+ 
+     <div class="col-xs-12 col-sm-12 col-md-12">
+       <mat-form-field class="example-full-width col-xs-12 col-sm-6 col-md-6">
+         <input type="text" matInput placeholder="username" name="username" required>
+ 
+ 
+       </mat-form-field>
+     </div>
+ 
+     <div class="col-xs-12 col-sm-12 col-md-12">
+       <mat-form-field class="col-xs-12 col-sm-6 col-md-6">
+ 
+         <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="birthDay" >
+ 
+         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+         <mat-datepicker #picker></mat-datepicker>
+       </mat-form-field>
+ 
+     </div>
+ 
+ 
+     <div class="col-xs-12 col-sm-12 col-md-12">
+       <mat-form-field class="col-xs-12 col-sm-6 col-md-6">
+ 
+         <mat-select placeholder="Gender" name="gender" >
+ 
+           <mat-option *ngFor="let gender of genders" [value]="gender.value">
+             {{ gender.viewValue }}
+           </mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
+ 
+ </form>
+</div>
+</div>
+
