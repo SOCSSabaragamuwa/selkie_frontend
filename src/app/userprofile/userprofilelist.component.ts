@@ -8,11 +8,12 @@ import { UserService } from './user.service';
   styleUrls: ['./userprofilelist.component.css']
 })
 export class UserprofilelistComponent implements OnInit {
-
+  usersList;
+  // tslint:disable-next-line:whitespace
   constructor(private userService:UserService) { }
-  userList;
-
   ngOnInit() {
+    this.userService.getAllMembers().subscribe(data => this.usersList = data.users
+    );
   }
 
 }

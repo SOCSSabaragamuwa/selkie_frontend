@@ -19,7 +19,6 @@ export class RegisterComponent implements OnInit {
   departments: any[] = [{  value: 'not selected', viewValue: 'Please select a faculty' }];
   degrees: any[]=[];
   register: Register = {
-
     firstName: "",
     lastName: "",
     birthDay: "",
@@ -33,6 +32,7 @@ export class RegisterComponent implements OnInit {
     degree: ""
   }
 
+ 
   genders = [
     { value: 'male', viewValue: 'Male' },
     { value: 'female', viewValue: 'Female' }
@@ -69,7 +69,10 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
-    this.registerService.postRegister(this.register);
+    if (this.register.password === '') {
+delete this.register.password;
+        }
+    this.registerService.postRegister(this.register).subscribe(data => console.log(data));
   }
 
   departmentOfFaculty(faclId: any) {
