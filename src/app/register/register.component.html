@@ -1,18 +1,18 @@
 <div class="container-fluid custom-form-style">
   <div class="row">
 
-      <div class="col-sm-6 col-md-8">
+    <div class="col-sm-6 col-md-8">
 
-      </div>
+    </div>
     <div class=" col-xs-12 col-sm-6 col-md-4 ">
       <div class=" col-xs-12 col-sm-12 col-md-12 card register-form">
         <h2 class="col-xs-12 col-sm-12 col-md-12 register-heading">Register</h2>
-        
-          <div class="sss">
+
+        <div class="sss">
           <img src="../../assets/man.png" alt="" class="col-xs-12 col-sm-12 col-md-12 register-logo-icon">
         </div>
         <form class="example-form" (ngSubmit)="onRegister()" #f="ngForm">
-         
+
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel"
@@ -112,41 +112,71 @@
           </div>
 
 
-         
+
 
           <div>
             <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
+
               <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel" required>
                 <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
                   {{ faculty.viewValue }}
                 </mat-option>
-                
-                
+
+                <mat-option (click)="openFacChooser()">
+                  other
+                </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
 
-          <div class="col-lg-12">
+
+
+          <div class=" col-xs-12 col-sm-12 col-md-12">
+            <div *ngIf="facChooser">
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" [(ngModel)]="register.faculty" name="otherfaculty" type="text">
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <mat-error *ngIf="fac.touched">
               <mat-error *ngIf="fac.errors?.required">
 
-                Faculty  is
+                Faculty is
                 <strong>required</strong>
               </mat-error>
             </mat-error>
+
+
+
           </div>
 
           <div>
             <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
               <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel" required>
-                <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)"  >
+                <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)">
                   {{ department.viewValue }}
+                </mat-option>
+
+                <mat-option (click)="openDepChooser()">
+                  other
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
 
-          <div class="col-lg-12">
+          <div class=" col-xs-12 col-sm-12 col-md-12">
+            <div *ngIf="depChooser">
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdepartment" [(ngModel)]="register.department" type="text">
+            </div>
+          </div>
+
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <mat-error *ngIf="dep.touched">
               <mat-error *ngIf="dep.errors?.required">
 
@@ -159,14 +189,24 @@
           <div>
             <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
               <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel" required>
-                <mat-option *ngFor="let degree of degrees" [value]="degree.value" >
+                <mat-option *ngFor="let degree of degrees" [value]="degree.value">
                   {{ degree.viewValue }}
+                </mat-option>
+
+                <mat-option (click)="openDegChooser()">
+                  other
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
 
-          <div class="col-lg-12">
+          <div class=" col-xs-12 col-sm-12 col-md-12">
+            <div *ngIf="degChooser">
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdegree" [(ngModel)]="register.degree" type="text">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <mat-error *ngIf="deg.touched">
               <mat-error *ngIf="deg.errors?.required">
 
@@ -176,9 +216,9 @@
             </mat-error>
           </div>
 
-          
 
-          
+
+
 
 
 
@@ -297,7 +337,7 @@
       </div>
     </div>
 
-    
-    
+
+
   </div>
 </div>
