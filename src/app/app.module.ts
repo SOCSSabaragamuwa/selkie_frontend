@@ -51,6 +51,8 @@ import { UserService } from './userprofile/user.service';
 import { UserprofilelistComponent } from './userprofile/userprofilelist.component';
 import { ItemlistPipe } from './register/itemlist.pipe';
 import { EditeventComponent } from './events/editevent.component';
+import { UserdetailComponent } from './userprofile/userdetail.component';
+import { UsereditComponent } from './userprofile/useredit/useredit.component';
 
 
 
@@ -97,6 +99,8 @@ import { EditeventComponent } from './events/editevent.component';
     UserprofilelistComponent,
     ItemlistPipe,
     EditeventComponent,
+    UserdetailComponent,
+    UsereditComponent,
    
     
 

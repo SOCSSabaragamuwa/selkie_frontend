@@ -15,8 +15,9 @@
 
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
-              <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel"
-                required>
+
+              <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel">
+
 
 
             </mat-form-field>
@@ -42,7 +43,8 @@
 
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
-              <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.lastName" #lastName="ngModel" required>
+
+              <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.lastName" #lastName="ngModel">
 
 
             </mat-form-field>
@@ -66,8 +68,9 @@
           </div>
 
           <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="birthDay" [(ngModel)]="register.birthDay" #birthDay="ngModel"
-              required>
+
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="birthDay" [(ngModel)]="register.birthDay" #birthDay="ngModel">
+
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
@@ -93,7 +96,9 @@
 
           <div>
             <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
-              <mat-select placeholder="Gender" name="gender" [(ngModel)]="register.gender" #gen="ngModel" required>
+
+              <mat-select placeholder="Gender" name="gender" [(ngModel)]="register.gender" #gen="ngModel">
+
                 <mat-option *ngFor="let gender of genders" [value]="gender.value">
                   {{ gender.viewValue }}
                 </mat-option>
@@ -115,18 +120,19 @@
 
 
           <div>
-            <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
 
-              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel" required>
+            <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
+              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
+
                 <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
                   {{ faculty.viewValue }}
                 </mat-option>
 
-                <mat-option (click)="openFacChooser()">
-                  other
-                </mat-option>
+
               </mat-select>
             </mat-form-field>
+
+            <div class="col-xs-2 col-sm-2 col-md-2" (click)="openFacChooser()">+</div>
           </div>
 
 
@@ -134,7 +140,12 @@
           <div class=" col-xs-12 col-sm-12 col-md-12">
             <div *ngIf="facChooser">
               <input class=" col-xs-12 col-sm-12 col-md-12 form-control" [(ngModel)]="register.faculty" name="otherfaculty" type="text">
+              <br>
+              <br>
+              <br>
+              <button mat-raised-button color="warn">Add Faculty</button>
             </div>
+
           </div>
 
 
@@ -156,22 +167,41 @@
           </div>
 
           <div>
-            <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
-              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel" required>
+
+            <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
+              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
                 <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)">
+
                   {{ department.viewValue }}
                 </mat-option>
 
-                <mat-option (click)="openDepChooser()">
-                  other
-                </mat-option>
+
               </mat-select>
             </mat-form-field>
+
+            <div class="col-xs-2 col-sm-2 col-md-2" (click)="openDepChooser()">+</div>
           </div>
 
           <div class=" col-xs-12 col-sm-12 col-md-12">
             <div *ngIf="depChooser">
               <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdepartment" [(ngModel)]="register.department" type="text">
+              <br>
+              <br>
+              <br>
+
+
+              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
+                <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
+                  {{ faculty.viewValue }}
+                </mat-option>
+
+
+              </mat-select>
+              <br>
+              <br>
+              <br>
+              <button mat-raised-button color="warn">Add Department</button>
+
             </div>
           </div>
 
@@ -187,22 +217,47 @@
           </div>
 
           <div>
-            <mat-form-field class="col-xs-12 col-sm-12 col-md-12">
-              <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel" required>
+
+            <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
+              <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel">
                 <mat-option *ngFor="let degree of degrees" [value]="degree.value">
+
                   {{ degree.viewValue }}
                 </mat-option>
 
-                <mat-option (click)="openDegChooser()">
-                  other
-                </mat-option>
+
               </mat-select>
             </mat-form-field>
+            <div class="col-xs-2 col-sm-2 col-md-2" (click)="openDegChooser()">+</div>
           </div>
 
           <div class=" col-xs-12 col-sm-12 col-md-12">
             <div *ngIf="degChooser">
+
+              <fieldset>
               <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdegree" [(ngModel)]="register.degree" type="text">
+              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
+                <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
+                  {{ faculty.viewValue }}
+                </mat-option>
+
+
+              </mat-select>
+              <br>
+              <br>
+              <br>
+              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
+                <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)">
+                  {{ department.viewValue }}
+                </mat-option>
+
+
+              </mat-select>
+              <br>
+              <br>
+              <br>
+              <button mat-raised-button color="warn">Add Degree</button>
+            </fieldset>
             </div>
           </div>
 
@@ -249,8 +304,9 @@
 
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
-              <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="register.username" #username="ngModel" required
-                pattern="[a-zA-Z][a-zA-Z ]+">
+
+              <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="register.username" #username="ngModel" pattern="[a-zA-Z][a-zA-Z ]+">
+
 
             </mat-form-field>
           </div>
@@ -277,7 +333,9 @@
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="register.password" #password="ngModel"
-                required minlength="8" maxlength="20" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})">
+
+                minlength="6" maxlength="8">
+
 
             </mat-form-field>
           </div>
@@ -303,7 +361,9 @@
 
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
               <input type="password" matInput placeholder="Confirm Password" name="confirmPassword" [(ngModel)]="register.confirmPassword"
-                #confirmPassword="ngModel" required validateEqual="password">
+
+                #confirmPassword="ngModel" validateEqual="password">
+
 
             </mat-form-field>
 
