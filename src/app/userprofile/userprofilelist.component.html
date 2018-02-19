@@ -1,72 +1,136 @@
 <div class="custom-spacer">
   <div class="container">
     <div class="row">
-      <h1>User Profile</h1><br>
+      <h1>User Profiles</h1>
+      <br>
+
+      <form (ngSubmit)="onSubmit()">
+        <div>
+
+          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+            <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchResult.facName" >
+
+              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
+                {{ faculty.viewValue }}
+              </mat-option>
+
+
+            </mat-select>
+          </mat-form-field>
+
+
+
+
+
+          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+            <mat-select placeholder="Department" name="department" [(ngModel)]="searchResult.depName" >
+
+              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
+                {{ faculty.viewValue }}
+              </mat-option>
+
+
+            </mat-select>
+          </mat-form-field>
+
+
+
+          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+            <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchResult.degName"  >
+
+              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
+                {{ faculty.viewValue }}
+              </mat-option>
+
+
+            </mat-select>
+          </mat-form-field>
+          <div class=" col-xs-10 col-sm-4 col-md-4">
+            <input type="text" class="form-control col-xs-10 col-sm-12 col-md-12" [(ngModel)]="searchResult.txtName">
+          </div>
+
+          <div class="col-xs-10 col-sm-2 col-md-2 ">
+            <button class="btn btn-primary"><span class="fa fa-search"></span></button>
+          </div>
+
+
+        </div>
+      </form>
+
+
       <div class="example-container">
-         
+
         <div class="col-lg-12 card">
-            <mat-accordion *ngFor="let user of usersList">
-         
-                <mat-expansion-panel (opened)="panelOpenState = true"
-                                     (closed)="panelOpenState = false">
-                  <mat-expansion-panel-header>
-                
-                    <mat-panel-title>
-                      
-                      <img src="../assets/images/user2.jpg" alt="user">
-                    </mat-panel-title>
-                  
-                    <mat-panel-description>
-                   <!-- {{user.first_name}}  <br><br> -->
-                   {{user.email}}<br><br>
+          <mat-accordion *ngFor="let user of usersList">
 
-                    </mat-panel-description>
-                  </mat-expansion-panel-header>
-                  <div class="mat-expansion-panel-body">
-          
-                      <div _ngcontent-c9="" class="jumbotron ">
-                        
-                            <div class="col-md-6">
-                                <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
 
-                                Personal Details <br>
-                                <mat-divider></mat-divider><br>
-                                <!-- First Name:   {{user.first_name}} <br>
+                <mat-panel-title>
+
+                  <img src="../assets/images/user2.jpg" alt="user">
+                </mat-panel-title>
+
+                <mat-panel-description>
+                  <!-- {{user.first_name}}  <br><br> -->
+                  {{user.email}}
+                  <br>
+                  <br>
+
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <div class="mat-expansion-panel-body">
+
+                <div _ngcontent-c9="" class="jumbotron ">
+
+                  <div class="col-md-6">
+                    <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+
+                    Personal Details
+                    <br>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <!-- First Name:   {{user.first_name}} <br>
                                 Last Name:   {{user.last_name}} <br> -->
 
-                                BOD: <br>
-                                Gender <br><br>
-                            </div>
-                            <div class="col-md-6">
-                                <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
+                    BOD:
+                    <br> Gender
+                    <br>
+                    <br>
+                  </div>
+                  <div class="col-md-6">
+                    <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
 
-                                University Details <br>
-                                <mat-divider></mat-divider><br>
-                                <!-- Batch:{{user.batch}} <br> -->
-                                <!-- <div *ngIf="user.faculty.name">
+                    University Details
+                    <br>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <!-- Batch:{{user.batch}} <br> -->
+                    <!-- <div *ngIf="user.faculty.name">
                                   Faculty: {{user.faculty.name}} <br>
                                 </div> -->
-                                <!-- Faculty: {{user.faculty.name}} <br>
+                    <!-- Faculty: {{user.faculty.name}} <br>
                                
                                 <!-- Department:{{user.department.name}} <br>
                                 Degree program :{{user.degree.name}}<br><br> -->
 
-                            </div>
-                         
-                          <button _ngcontent-c9="" class="btn btn-danger">Delete</button>
-                          <button _ngcontent-c9="" class="btn btn-success ">Edit</button>
-                      </div>
-                      
-                    </div>
-                     
-                      
-                   </mat-expansion-panel>
-               
-              </mat-accordion>
-         
-        </div>
-      
-    </div>
-  </div>
+                  </div>
 
-</div>
+                  <button class="btn btn-danger">Delete</button>
+                  <button class="btn btn-success ">Edit</button>
+                  <button class="btn btn-primary " (click)="showUser(user.self)">User profile</button>
+                </div>
+
+              </div>
+
+
+            </mat-expansion-panel>
+
+          </mat-accordion>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>

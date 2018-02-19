@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from './user';
 import { UserService } from './user.service';
+import { Subscription } from 'rxjs/Subscription';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-userprofile',
@@ -9,13 +11,18 @@ import { UserService } from './user.service';
 })
 export class UserprofileComponent implements OnInit {
 
-  
-  userList:User;
-  constructor(private userService:UserService) { }
+
+
+
+  constructor(private userService: UserService, ) { }
+
+
+
 
   ngOnInit() {
-    this.userList=this.userService.getUserList();
-    console.log(this.userList);
+
+
   }
+
 
 }
