@@ -31,9 +31,5 @@ export class EventComponent implements OnInit {
       
       });
   }
-  eventEdit(id:any){
-    console.log(id);
-    this.router.navigate(['event',id]);
-
-  }
+  
 }
