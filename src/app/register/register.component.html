@@ -124,8 +124,8 @@
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
 
-                <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
-                  {{ faculty.viewValue }}
+                <mat-option *ngFor="let faculty of faculties" [value]="faculty.name">
+                  {{ faculty.name }}
                 </mat-option>
 
 
@@ -139,11 +139,11 @@
 
           <div class=" col-xs-12 col-sm-12 col-md-12">
             <div *ngIf="facChooser">
-              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" [(ngModel)]="register.faculty" name="otherfaculty" type="text">
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" [(ngModel)]="Addregister.name" name="otherfaculty" type="text">
               <br>
               <br>
               <br>
-              <button mat-raised-button color="warn">Add Faculty</button>
+              <button mat-raised-button color="warn" (click)="addFaculty()">Add Faculty</button>
             </div>
 
           </div>
@@ -170,9 +170,9 @@
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
-                <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)">
+                <mat-option *ngFor="let department of departmentList" [value]="department.name">
 
-                  {{ department.viewValue }}
+                  {{ department.name }}
                 </mat-option>
 
 
@@ -184,15 +184,15 @@
 
           <div class=" col-xs-12 col-sm-12 col-md-12">
             <div *ngIf="depChooser">
-              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdepartment" [(ngModel)]="register.department" type="text">
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdepartment" [(ngModel)]="AddDepartment.name" type="text">
               <br>
               <br>
               <br>
 
 
-              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
-                <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
-                  {{ faculty.viewValue }}
+              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="AddDepartment.faculty_id" #fac="ngModel">
+                <mat-option *ngFor="let faculty of faculties" [value]="faculty.id">
+                  {{ faculty.name }}
                 </mat-option>
 
 
@@ -200,7 +200,7 @@
               <br>
               <br>
               <br>
-              <button mat-raised-button color="warn">Add Department</button>
+              <button mat-raised-button color="warn" (click)="addDepartment()">Add Department</button>
 
             </div>
           </div>
@@ -220,9 +220,9 @@
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel">
-                <mat-option *ngFor="let degree of degrees" [value]="degree.value">
+                <mat-option *ngFor="let degree of degrees" [value]="degree.name">
 
-                  {{ degree.viewValue }}
+                  {{ degree.name }}
                 </mat-option>
 
 
@@ -235,10 +235,14 @@
             <div *ngIf="degChooser">
 
               <fieldset>
-              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdegree" [(ngModel)]="register.degree" type="text">
-              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
-                <mat-option *ngFor="let faculty of faculties" [value]="faculty.value" (click)="departmentOfFaculty(faculty.facId)">
-                  {{ faculty.viewValue }}
+              <input class=" col-xs-12 col-sm-12 col-md-12 form-control" name="otherdegree" [(ngModel)]="AddDegree.name" type="text">
+              <br>
+              <br>
+              <br>
+              <mat-select placeholder="Department" name="department" [(ngModel)]="AddDegree.department_id" #dep="ngModel">
+                <mat-option *ngFor="let department of departmentList" [value]="department.id">
+
+                  {{ department.name }}
                 </mat-option>
 
 
@@ -246,17 +250,7 @@
               <br>
               <br>
               <br>
-              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
-                <mat-option *ngFor="let department of departments" [value]="department.value" (click)="degreeOfDepartment(department.depId)">
-                  {{ department.viewValue }}
-                </mat-option>
-
-
-              </mat-select>
-              <br>
-              <br>
-              <br>
-              <button mat-raised-button color="warn">Add Degree</button>
+              <button mat-raised-button color="warn" (click)="addDegree()">Add Degree</button>
             </fieldset>
             </div>
           </div>
@@ -391,7 +385,7 @@
 
 
           <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 button-container">
-            <button mat-raised-button color="accent">Register</button>
+            <button mat-raised-button color="accent" [disabled]="!f.valid">Register</button>
           </div>
         </form>
       </div>
