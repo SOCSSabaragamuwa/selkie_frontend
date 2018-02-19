@@ -23,4 +23,11 @@ export class EventlistComponent implements OnInit {
     this.router.navigate(['/event/add']);
   }
 
+  
+
+  showEvent(id:any){
+    console.log(id);
+    this.router.navigate(['event',id]);
+
+  }
 }
