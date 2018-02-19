@@ -10,7 +10,6 @@ declare var $: any;
 })
 export class RegisterComponent implements OnInit {
 
-  
   facChooser:boolean=false;
   depChooser:boolean=false;
   degChooser:boolean=false;
@@ -32,6 +31,37 @@ export class RegisterComponent implements OnInit {
     degree: ""
   }
 
+  Addregister :any = {
+    name:""
+  }
+
+  AddDepartment :any = {
+    name:"",
+    faculty_id:""
+  }
+
+  AddDegree:any ={
+    name:"",
+    department_id:""
+  }
+  addFaculty() {
+    console.log(this.Addregister);
+    this.registerService.postFaculty(this.Addregister).subscribe(data => console.log(data));
+    this.registerService.getFaculties().subscribe(data => this.faculties = data.faculties);
+  }
+
+  addDepartment() {
+    console.log(this.AddDepartment);
+    this.registerService.postDepartment(this.AddDepartment).subscribe(data => console.log(data));
+    this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
+    //this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
+  }
+
+  addDegree(){
+    console.log(this.AddDegree);
+    this.registerService.postDegree(this.AddDegree).subscribe(data => console.log(data));
+    this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
+  }
  
   genders = [
     { value: 'male', viewValue: 'Male' },
@@ -43,29 +73,31 @@ export class RegisterComponent implements OnInit {
     { value: 'sabra', viewValue: 'Sabargamuwa' },
     { value: 'pera', viewValue: 'Peradeniya' }
   ];
+  departmentList;
+  // departmentList = [
+  //   { depId: 1, value: 'food', viewValue: 'Food', facId: 1 },
+  //   { depId: 2, value: 'nr', viewValue: 'Nr ', facId: 2 }
+  // ];
+  // degreeList;
+  degreeList;
+//  degreeList = [
+//     { degId: 1, value: 'cis', viewValue: 'Bsc in computing and info',depId: 1 },
+//      { degId: 2, value: 'pst', viewValue: 'Nr',depId: 2 }
+//    ];
 
-  departmentList = [
-    { depId: 1, value: 'food', viewValue: 'Food', facId: 1 },
-    { depId: 2, value: 'nr', viewValue: 'Nr ', facId: 2 }
-  ];
-
-  degreeList = [
-    { degId: 1, value: 'cis', viewValue: 'Bsc in computing and info',depId: 1 },
-    { degId: 2, value: 'pst', viewValue: 'Nr',depId: 2 }
-  ];
-
-  faculties = [
-    { facId: 1, value: 'fac', viewValue: 'Apllied sciences' },
-    { facId: 2, value: 'fam', viewValue: 'Managment' },
-    
-  ];
-  constructor(private registerService: RegisterService,public dialog: MatDialog) {
+  faculties;
+  // faculties = [
+  //   { facId: 1, value: 'fac', viewValue: 'Apllied sciences' },
+  //   { facId: 2, value: 'fam', viewValue: 'Managment' },
+  // ];
+  constructor(private registerService: RegisterService, public dialog: MatDialog) {
 
   }
 
   ngOnInit() {
-
-
+    this.registerService.getFaculties().subscribe(data => this.faculties = data.faculties);
+    this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
+    this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
   }
 
   onRegister() {
@@ -76,6 +108,7 @@ delete this.register.password;
   }
 
   departmentOfFaculty(faclId: any) {
+    console.log(faclId);
     this.facultyID = faclId;
     if (this.facultyID) {
       this.departments = [];
@@ -96,6 +129,7 @@ delete this.register.password;
 
 
   degreeOfDepartment(departmentID: any) {
+    console.log(departmentID);
     this.departmentID = departmentID;
     if (this.departmentID) {
       this.degrees = [];
@@ -113,7 +147,6 @@ delete this.register.password;
         }
       }
     }
-    console.log("hi my name");
   }
 
   
