@@ -53,6 +53,7 @@ import { ItemlistPipe } from './register/itemlist.pipe';
 import { EditeventComponent } from './events/editevent.component';
 import { UserdetailComponent } from './userprofile/userdetail.component';
 import { UsereditComponent } from './userprofile/useredit.component';
+import { EventComponent } from './events/event.component';
 
 
 
@@ -101,6 +102,7 @@ import { UsereditComponent } from './userprofile/useredit.component';
     EditeventComponent,
     UserdetailComponent,
     UsereditComponent,
+    EventComponent,
    
     
 
