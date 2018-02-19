@@ -52,7 +52,7 @@ import { UserprofilelistComponent } from './userprofile/userprofilelist.componen
 import { ItemlistPipe } from './register/itemlist.pipe';
 import { EditeventComponent } from './events/editevent.component';
 import { UserdetailComponent } from './userprofile/userdetail.component';
-import { UsereditComponent } from './userprofile/useredit/useredit.component';
+import { UsereditComponent } from './userprofile/useredit.component';
 
 
 
