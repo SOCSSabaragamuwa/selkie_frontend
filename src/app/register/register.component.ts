@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
     firstName: "",
     lastName: "",
     birthDay: "",
-    gender: "",
+    role: "",
     email: "",
     username: "",
     password: "",
@@ -63,9 +63,9 @@ export class RegisterComponent implements OnInit {
     this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
   }
  
-  genders = [
-    { value: 'male', viewValue: 'Male' },
-    { value: 'female', viewValue: 'Female' }
+  role = [
+    { value: 'user', viewValue: 'User' },
+    { value: 'moderator', viewValue: 'Moderator' }
 
   ];
 
