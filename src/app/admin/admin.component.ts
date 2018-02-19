@@ -74,4 +74,9 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['/admin/']);
   }
 
+  showUser(){
+    this.router.navigate(['/admin/users']);
+
+  }
+
 }

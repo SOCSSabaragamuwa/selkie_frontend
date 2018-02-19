@@ -6,6 +6,8 @@ import { AdmineventlistComponent } from './admineventlist.component';
 import { AddeventsComponent } from '../events/addevents.component';
 import { RegisterComponent } from '../register/register.component';
 import { EditeventComponent } from '../events/editevent.component';
+import { UserprofileComponent } from '../userprofile/userprofile.component';
+import { UserprofilelistComponent } from '../userprofile/userprofilelist.component';
 
 
 
@@ -16,6 +18,7 @@ export const AdminRouting: Routes = [
   { path: 'event', component: AdmineventlistComponent},
   { path: 'event/addevent', component:AddeventsComponent},
   {path:'event/adduser',component:RegisterComponent},
+  {path:'users',component:UserprofilelistComponent},
   {path:'event/edit/:id',component:EditeventComponent}
   
 
