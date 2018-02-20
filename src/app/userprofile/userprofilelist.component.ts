@@ -56,6 +56,7 @@ export class UserprofilelistComponent implements OnInit {
     if(this.searchResult.txtName !== ""){
       this.searchMessage = "Search Fazy search";
     }
+    this.usersList =[];
     this.userService.getAllMembersBydegreeDepartmentFaculty(this.searchResult).subscribe(data => this.usersList = data);
   }
 

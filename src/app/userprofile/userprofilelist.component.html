@@ -7,9 +7,9 @@
               <div>
       
                 <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-                  <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchfacultyResult.facName" >
+                  <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchfacultyResult.facId" >
       
-                    <mat-option *ngFor="let faculty of faculties" [value]="faculty.name">
+                    <mat-option *ngFor="let faculty of faculties" [value]="faculty.id">
                       {{ faculty.name }}
                     </mat-option>
       
@@ -34,9 +34,9 @@
                   <div>
           
                       <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-                          <mat-select placeholder="Department" name="department" [(ngModel)]="searchDepartmentResult.depName" >
+                          <mat-select placeholder="Department" name="department" [(ngModel)]="searchDepartmentResult.depId" >
               
-                            <mat-option *ngFor="let department of departmetslist" [value]="department.name" >
+                            <mat-option *ngFor="let department of departmetslist" [value]="department.id" >
                               {{ department.name }}
                             </mat-option>
               
@@ -60,9 +60,9 @@
             <div>
     
                 <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-                    <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchDegreeResult.degName"  >
+                    <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchDegreeResult.degId"  >
         
-                      <mat-option *ngFor="let degreeobj of degreelist" [value]="degreeobj.name">
+                      <mat-option *ngFor="let degreeobj of degreelist" [value]="degreeobj.id">
                         {{ degreeobj.name }}
                       </mat-option>
         
