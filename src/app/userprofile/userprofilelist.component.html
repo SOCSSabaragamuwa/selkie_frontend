@@ -1,6 +1,85 @@
 <div class="custom-spacer">
   <div class="container">
     <div class="row">
+      <h1>Search By Faculty </h1>
+      <div>
+          <form (ngSubmit)="onSearchfacultySubmit()">
+              <div>
+      
+                <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+                  <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchfacultyResult.facName" >
+      
+                    <mat-option *ngFor="let faculty of faculties" [value]="faculty.name">
+                      {{ faculty.name }}
+                    </mat-option>
+      
+                    
+                  </mat-select>
+
+
+                </mat-form-field>
+                <div class="col-xs-10 col-sm-2 col-md-2 ">
+                    <button class="btn btn-primary"><span class="fa fa-search"></span></button>
+                </div>
+                </div>
+          </form>
+
+      </div>
+      </div>
+      
+      <div class="row">
+        <h1>Search By department </h1>
+          <div>
+              <form (ngSubmit)="onSearchdepartmentSubmit()">
+                  <div>
+          
+                      <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+                          <mat-select placeholder="Department" name="department" [(ngModel)]="searchDepartmentResult.depName" >
+              
+                            <mat-option *ngFor="let department of departmetslist" [value]="department.name" >
+                              {{ department.name }}
+                            </mat-option>
+              
+              
+                          </mat-select>
+                        </mat-form-field>
+                    <div class="col-xs-10 col-sm-2 col-md-2 ">
+                        <button class="btn btn-primary"><span class="fa fa-search"></span></button>
+                    </div>
+                    </div>
+              </form>
+    
+          </div>
+      </div>
+      
+<div class="row">
+
+    <div>
+        <h1>Search By degree </h1>
+        <form (ngSubmit)="onSearchdegree()">
+            <div>
+    
+                <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+                    <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchDegreeResult.degName"  >
+        
+                      <mat-option *ngFor="let degreeobj of degreelist" [value]="degreeobj.name">
+                        {{ degreeobj.name }}
+                      </mat-option>
+        
+        
+                    </mat-select>
+                  </mat-form-field>
+              <div class="col-xs-10 col-sm-2 col-md-2 ">
+                  <button class="btn btn-primary"><span class="fa fa-search"></span></button>
+              </div>
+              </div>
+        </form>
+
+    </div>
+
+
+</div>
+      <br>
       <h1>User Profiles</h1>
       <br>
 
@@ -8,10 +87,10 @@
         <div>
 
           <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-            <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchResult.facName" >
+            <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchResult.facId" >
 
-              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
-                {{ faculty.viewValue }}
+              <mat-option *ngFor="let faculty of faculties" [value]="faculty.id" (click)="departmentOfFaculty(faculty.id)">
+                {{ faculty.name }}
               </mat-option>
 
 
@@ -23,10 +102,10 @@
 
 
           <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-            <mat-select placeholder="Department" name="department" [(ngModel)]="searchResult.depName" >
+            <mat-select placeholder="Department" name="department" [(ngModel)]="searchResult.depId" >
 
-              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
-                {{ faculty.viewValue }}
+              <mat-option *ngFor="let department of departmetslist" [value]="department.id"  (click)="degreeOfDepartment(department.id)">
+                {{ department.name }}
               </mat-option>
 
 
@@ -36,28 +115,30 @@
 
 
           <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
-            <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchResult.degName"  >
+            <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchResult.degId"  >
 
-              <mat-option *ngFor="let faculty of faculties" [value]="faculty.value">
-                {{ faculty.viewValue }}
+              <mat-option *ngFor="let degreeobj of degreelist" [value]="degreeobj.id" (click)="degreeClick(degreeobj.id)">
+                {{ degreeobj.name }}
               </mat-option>
 
 
             </mat-select>
           </mat-form-field>
           <div class=" col-xs-10 col-sm-4 col-md-4">
-            <input type="text" class="form-control col-xs-10 col-sm-12 col-md-12" [(ngModel)]="searchResult.txtName" name="search">
+            <input type="text" class="form-control col-xs-10 col-sm-12 col-md-12" name="txtName" [(ngModel)]="searchResult.txtName">
           </div>
 
           <div class="col-xs-10 col-sm-2 col-md-2 ">
             <button class="btn btn-primary"><span class="fa fa-search"></span></button>
           </div>
-
+         
 
         </div>
       </form>
 
-
+<div class="row">
+   {{searchMessage}} 
+</div>
       <div class="example-container">
 
         <div class="col-lg-12 card">

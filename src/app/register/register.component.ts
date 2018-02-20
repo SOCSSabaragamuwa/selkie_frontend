@@ -53,8 +53,8 @@ export class RegisterComponent implements OnInit {
   addDepartment() {
     console.log(this.AddDepartment);
     this.registerService.postDepartment(this.AddDepartment).subscribe(data => console.log(data));
+    // this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
     this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
-    //this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
   }
 
   addDegree(){
@@ -138,6 +138,7 @@ degreeListObj :any[]=[];
   degreeOfDepartment(departmentID: any) {
     console.log(departmentID);
     this.departmentID = departmentID;
+    this.degreeListObj =[];
     this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data=>{this.degreeListObj=data.degrees});
   }
 
