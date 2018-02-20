@@ -54,6 +54,8 @@ import { EditeventComponent } from './events/editevent.component';
 import { UserdetailComponent } from './userprofile/userdetail.component';
 import { UsereditComponent } from './userprofile/useredit.component';
 import { EventComponent } from './events/event.component';
+import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
+
 
 
 
@@ -126,7 +128,8 @@ import { EventComponent } from './events/event.component';
 
     MatTabsModule,
     MatExpansionModule,
-    MatSelectModule
+    MatSelectModule,
+    Ng4GeoautocompleteModule.forRoot()
 
   ],
   providers: [
