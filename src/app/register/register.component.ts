@@ -86,6 +86,7 @@ export class RegisterComponent implements OnInit {
 //    ];
 
   faculties;
+  departmentslistobj:any[]=[];
   // faculties = [
   //   { facId: 1, value: 'fac', viewValue: 'Apllied sciences' },
   //   { facId: 2, value: 'fam', viewValue: 'Managment' },
@@ -110,43 +111,30 @@ delete this.register.password;
   departmentOfFaculty(faclId: any) {
     console.log(faclId);
     this.facultyID = faclId;
-    if (this.facultyID) {
-      this.departments = [];
-      for (let i = 0; i < this.departmentList.length; i++) {
+    this.departmentslistobj = [];
+    this.registerService.getDepartmentByFacultyID(this.facultyID).subscribe(data => {this.departmentslistobj=data.departments });
+    // if (this.facultyID) {
+    //   this.departments = [];
+    //   for (let i = 0; i < this.departmentList.length; i++) {
 
-        if (this.departmentList[i].facId == this.facultyID) {
+    //     if (this.departmentList[i].facId == this.facultyID) {
 
-          if (this.departments.indexOf(this.departmentList[i]) == -1) {
+    //       if (this.departments.indexOf(this.departmentList[i]) == -1) {
 
-            this.departments.push(this.departmentList[i]);
-          }
+    //         this.departments.push(this.departmentList[i]);
+    //       }
 
-        }
-      }
-    }
+    //     }
+    //   }
+    // }
 
   }
 
-
+degreeListObj :any[]=[];
   degreeOfDepartment(departmentID: any) {
     console.log(departmentID);
     this.departmentID = departmentID;
-    if (this.departmentID) {
-      this.degrees = [];
-      for (let i = 0; i < this.degreeList.length; i++) {
-
-        if (this.degreeList[i].depId == this.departmentID) {
-
-          if (this.degrees.indexOf(this.degreeList[i]) == -1) {
-
-            this.degrees.push(this.degreeList[i]);
-
-            console.log(this.degrees);
-          }
-
-        }
-      }
-    }
+    this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data=>{this.degreeListObj=data.degrees});
   }
 
   

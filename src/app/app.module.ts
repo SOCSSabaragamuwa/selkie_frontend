@@ -102,15 +102,8 @@ import { EventComponent } from './events/event.component';
     EditeventComponent,
     UserdetailComponent,
     UsereditComponent,
-    EventComponent,
-   
-    
-
-
-
+    EventComponent
   ],
-   
-    
   imports: [
     BrowserModule,
     routing,

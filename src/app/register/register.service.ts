@@ -36,4 +36,14 @@ export class RegisterService {
     console.log(degrees);
     return this.http.post('/degrees', degrees).map((response: Response) => response.json());
   }
+
+  getDepartmentByFacultyID(facId:any){
+    console.log(facId);
+    return this.http.get('/departments?faculty=' + facId).map((response: Response) => response.json());
+  }
+
+  getDegreeByDepartmentID(depId:any){
+    console.log(depId);
+    return this.http.get('/degrees?department=' + depId).map((response: Response) => response.json());
+  }
 }

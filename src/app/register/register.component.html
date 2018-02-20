@@ -124,7 +124,7 @@
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
 
-                <mat-option *ngFor="let faculty of faculties" [value]="faculty.name">
+                <mat-option *ngFor="let faculty of faculties" [value]="faculty.id" (click)="departmentOfFaculty(faculty.id)">
                   {{ faculty.name }}
                 </mat-option>
 
@@ -171,7 +171,7 @@
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
-                <mat-option *ngFor="let department of departmentList" [value]="department.name">
+                <mat-option *ngFor="let department of departmentslistobj" [value]="department.id" (click)="degreeOfDepartment(department.id)">
 
                   {{ department.name }}
                 </mat-option>
@@ -223,7 +223,7 @@
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
               <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel">
-                <mat-option *ngFor="let degree of degrees" [value]="degree.name">
+                <mat-option *ngFor="let degree of degreeListObj" [value]="degree.id">
 
                   {{ degree.name }}
                 </mat-option>
