@@ -105,6 +105,10 @@ export class RegisterComponent implements OnInit {
     if (this.register.password === '') {
 delete this.register.password;
         }
+
+        if (this.register.role === '') {
+          delete this.register.role;
+                  }
     this.registerService.postRegister(this.register).subscribe(data => console.log(data));
   }
 

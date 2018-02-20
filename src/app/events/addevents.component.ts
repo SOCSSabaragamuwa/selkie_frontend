@@ -16,8 +16,9 @@ export class AddeventsComponent implements OnInit {
     eventLocation:"location",
     date:"",
     time:"",
-    longDes:"this",
-    shortDes:"sathira"
+    description:"this",
+    start_at:""
+    
 
   }
   constructor(private eventService:EventService,private router:Router) { }
@@ -25,10 +26,14 @@ export class AddeventsComponent implements OnInit {
 
 
   ngOnInit() {
+
+
   }
   onSubmit() {
+       
+  
     this.eventService.setMethod(this.eventObj);
-    // console.log(this.eventObj);
-    this.router.navigate(['/event'])
+    console.log(this.eventObj);
+    this.router.navigate(['admin/event'])
   }
 }
