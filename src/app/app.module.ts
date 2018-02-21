@@ -55,6 +55,7 @@ import { UserdetailComponent } from './userprofile/userdetail.component';
 import { UsereditComponent } from './userprofile/useredit.component';
 import { EventComponent } from './events/event.component';
 import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
+import { DatePipe } from '@angular/common';
 
 
 
@@ -136,7 +137,8 @@ import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
     EventService,
     LoginService,
     RegisterService,
-    UserService
+    UserService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
