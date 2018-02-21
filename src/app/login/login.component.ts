@@ -14,8 +14,11 @@ export class LoginComponent implements OnInit {
   constructor(private loginService:LoginService,private router:Router) { }
 
   login : Login={
-    username:"sathira",
-    password:'*******'
+    username:"",
+    password:"",
+    grant_type:"password",
+    client_id:2,
+    client_secret:"ZACAZyPfwyGdhtvhr6ARaZFzWn0uPaDXi7RSCBIb",
   }
 
 
@@ -27,7 +30,10 @@ export class LoginComponent implements OnInit {
   // }
 
   onSubmit(){
-    this.loginService.sendData(this.login);
+    this.loginService.sendData(this.login).subscribe(data => {
+console.log(data);
+ this.loginService.StoreToken(data);
+    });
   }
 
 }
