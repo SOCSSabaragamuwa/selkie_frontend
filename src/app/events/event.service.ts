@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Eventobj } from './eventobj';
+import { Http } from '@angular/http';
 @Injectable()
 export class EventService {
   eventList:Eventobj[]=[
@@ -27,14 +28,15 @@ export class EventService {
     // {eventName:"EventThree"}
   ]
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   setMethod(event:any){
     console.log(event);
     this.eventList.push(event);
   }
   getAllEventData(){
-    return this.eventList;
+   //return this.http.get('/events').map((response: Response) => response.json());
+return this.eventList;
   }
 
   getEventDetails(eventId:any){

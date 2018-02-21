@@ -16,7 +16,7 @@
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
 
-              <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.firstName" #firstName="ngModel">
+              <input type="text" matInput placeholder="firstName" name="firstName" [(ngModel)]="register.first_name" #firstName="ngModel">
 
 
 
@@ -44,7 +44,7 @@
           <div>
             <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
 
-              <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.lastName" #lastName="ngModel">
+              <input type="text" matInput placeholder="lastName" name="lastName" [(ngModel)]="register.last_name" #lastName="ngModel">
 
 
             </mat-form-field>
@@ -122,7 +122,7 @@
           <div>
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
-              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty" #fac="ngModel">
+              <mat-select placeholder="Faculty" name="depaartment" [(ngModel)]="register.faculty_id" #fac="ngModel">
 
                 <mat-option *ngFor="let faculty of faculties" [value]="faculty.id" (click)="departmentOfFaculty(faculty.id)">
                   {{ faculty.name }}
@@ -170,7 +170,7 @@
           <div>
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
-              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department" #dep="ngModel">
+              <mat-select placeholder="Department" name="department" [(ngModel)]="register.department_id" #dep="ngModel">
                 <mat-option *ngFor="let department of departmentslistobj" [value]="department.id" (click)="degreeOfDepartment(department.id)">
 
                   {{ department.name }}
@@ -222,7 +222,7 @@
           <div>
 
             <mat-form-field class="col-xs-10 col-sm-10 col-md-10">
-              <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree" #deg="ngModel">
+              <mat-select placeholder="Degree program" name="degree" [(ngModel)]="register.degree_id" #deg="ngModel">
                 <mat-option *ngFor="let degree of degreeListObj" [value]="degree.id">
 
                   {{ degree.name }}

@@ -8,17 +8,17 @@
     <button class="col-md-2" mat-raised-button color="primary" (click)="addEvent()">Add evevnt</button>
   </div>
   <div class=" col-xs-12 col-sm-12 col-md-12 card" *ngFor="let item of eventList| searchfilter: 'eventName' : txtSearch.value" (click)="showEvent(item.id)">
-     <div > <h1 class="event-name">{{item.eventName}}</h1></div>
+     <div > <h1 class="event-name">{{item.name}}</h1></div>
 
      <div class="col-sm-4 col-md-4 event-info" > <i class="fa fa-map-marker icons"></i>
-      <div>{{item.eventLocation}} </div>
+      <div>{{item.description}} </div>
     </div>
      <div class=" col-sm-4 col-md-4 event-info "><i class="fa fa-calendar icons"></i>
-      <div>date{{item.date}}</div>
+      <div>date{{item.start_at}}</div>
     </div>
      <div class=" col-sm-4 col-md-4 event-info"> <i class="fa fa-clock-o icons"></i>
       <div>
-        name {{item.time}}
+        name {{item.location}}
       </div>
     </div>
 

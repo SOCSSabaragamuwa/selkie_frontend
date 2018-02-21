@@ -18,17 +18,17 @@ export class RegisterComponent implements OnInit {
   departments: any[] = [{  value: 'not selected', viewValue: 'Please select a faculty' }];
   degrees: any[]=[];
   register: Register = {
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     birthDay: "",
     role: "",
     email: "",
     username: "",
     password: "",
     confirmPassword: "",
-    faculty: "",
-    department: "",
-    degree: ""
+    faculty_id: "",
+    department_id: "",
+    degree_id: ""
   }
 
   Addregister :any = {
