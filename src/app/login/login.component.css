@@ -1,34 +1,36 @@
 .custom-style{
  
- padding-top: 1px;
+    padding-top: 1px;
  
 }
 .whole{
- opacity: 0.5;
- /* background-color: red; */
+    opacity: 0.5;
+    /* background-color: red; */
 }
 
 .custom-row-style{
- margin-top: 70px;
- margin-bottom:50px;
- padding: auto;
+    margin-top: 70px;
+    margin-bottom:20px;
+    padding: auto;
   
 }
 
 .login-form{
- padding-top:200px;
- height:400px;
- border-radius:5px;
- background-color: white;  
+    padding-top:200px;
+    height:400px;
+    border-radius:5px;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 200px;  
 }
 
 .button-container{
- text-align: center;
+    text-align: center;
 }
 
 .box{
-  padding-top:10px;
-  min-height: 500px;
+    padding-top:10px;
+    min-height: 500px;
  
 }
 
@@ -42,17 +44,92 @@
 }
 
 .slide{ 
-    background-image: url(../../assets/slide2.jpg);
+    background-image: url(../../assets/slide3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-   background-attachment: fixed;
-   min-height: 500px;
-   padding-left: 0px;
+    background-attachment: fixed;
+    height: 500px;
+    padding-left: 0px;
+    text-align: center;
 }
+
+.labelone h1{
+    padding-top: 180px;
+    color: white;
+   /* color: #5ABDD1;*/
+    font-size: 80px;
+    font-family: Calibri light;
+    line-height: 10px;
+}
+
+.labeltwo h2{
+    color: white;
+   /* color: #F76464;*/
+    font-size: 60px;
+    font-family: Calibri light;
+}
+
 .slider{
    padding: 0px;
    width:100%;
    height: 500px; 
-  
- 
+}
+
+/*text animation*/
+.label {
+    padding-bottom: 100px;
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 20s linear infinite 0s;
+}
+.label h1 {
+    font-family: "helvetica neue", helvetica;
+    text-transform: uppercase;
+    font-size: 80px;
+    padding: 0;
+    line-height: 100px;
+	color: rgba(255,255,255, 1);
+}
+
+
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+        transform: scale(0.5);
+	    /*transform: translateY(200px);*/
+	}
+	8% {
+	    opacity: 0.5;
+        transform: scale(0.5);
+	    /*transform: translateY(0px);*/
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+	19% { opacity: 1 }
+	25% {
+	    opacity: 1;
+	    transform: scale(1);
+	}
+	100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+	.label h1 { font-size: 100px }
+}
+@media screen and (max-width: 600px) { 
+	.label h1 { font-size: 50px }
 }
