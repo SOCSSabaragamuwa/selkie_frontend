@@ -56,6 +56,9 @@ import { UsereditComponent } from './userprofile/useredit.component';
 import { EventComponent } from './events/event.component';
 import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 import { DatePipe } from '@angular/common';
+import { BulkcsvComponent } from './admin/bulkcsv.component';
+
+
 
 
 
@@ -105,7 +108,8 @@ import { DatePipe } from '@angular/common';
     EditeventComponent,
     UserdetailComponent,
     UsereditComponent,
-    EventComponent
+    EventComponent,
+    BulkcsvComponent
   ],
   imports: [
     BrowserModule,
