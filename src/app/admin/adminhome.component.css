@@ -1,7 +1,7 @@
 .card{
 
 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
  
  
 
@@ -45,21 +45,217 @@
 }
 .event-card{
     padding: 0px;
-    height: 350px;
-    background-image: url('../../assets/Events.jpg');
+    height: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
     margin-bottom: 20px;
 }
 .user-card{
     padding:0px;
-    height: 350px;
-    background-image: url('../../assets/users.png');
+    height: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
     margin-bottom: 20px;
 }
+
+.user-panelone img{
+    width: 30%;
+    height: 30%;
+   
+}
+
+.user-paneltwo img{
+     width: 30%;
+    height: 30%;
+
+}
+
+.userone{
+     border-bottom: 2px solid dodgerblue;
+     padding-bottom: 35px;
+      padding-top: 35px;
+}
+
+.userone p{
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.usertwo{
+     padding-top: 35px;
+     border-bottom: 2px solid dodgerblue;
+     padding-bottom: 35px;
+}
+
+.usertwo p{
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.userthree{
+     border-bottom: 2px solid dodgerblue;
+     padding-bottom: 35px;
+      padding-top: 35px;
+}
+
+.userthree p{
+    padding-left: 15px;
+    display: inline-block;
+}
+
+
+
+.userfour{
+     border-bottom: 2px solid dodgerblue;
+     padding-bottom: 35px;
+      padding-top: 35px;
+}
+
+.userfour p{
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.userfive{
+     border-bottom: 2px solid dodgerblue;
+     padding-bottom: 35px;
+      padding-top: 35px;
+}
+
+.userfive p{
+    padding-left: 15px;
+    display: inline-block;
+}
+
 .admin-home-container{
 
     margin-top:40px;
+}
+
+.user-paneltwo button {
+
+  border-radius: 4px;
+  background-color: dodgerblue;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+.user-paneltwo button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.user-paneltwo button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.user-paneltwo button:hover span {
+  padding-right: 25px;
+}
+
+.user-paneltwo button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.event-panelone{
+    text-align: center;
+}
+
+.event-paneltwo{
+    text-align: center;
+}
+
+.event-panelone img{
+    width: 70%;
+    height: 70%;
+}
+
+.event-paneltwo img{
+    width: 70%;
+    height: 70%;
+}
+
+.eventone{
+     border-bottom: 2px solid firebrick;
+     padding-bottom: 15px;
+      padding-top: 15px;
+}
+
+.eventtwo{
+     border-bottom: 2px solid firebrick;
+     padding-bottom: 15px;
+      padding-top: 15px;
+}
+
+.eventthree{
+     border-bottom: 2px solid firebrick;
+     padding-bottom: 15px;
+      padding-top: 15px;
+}
+
+.eventone p {
+    padding-top: 10px;
+}
+
+.eventtwo p{
+    padding-top: 10px;
+}
+
+.eventthree p{
+    padding-top: 10px;
+}
+
+.event-paneltwo button {
+
+  border-radius: 4px;
+  background-color: firebrick;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 75px;
+}
+
+.event-paneltwo button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.event-paneltwo button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.event-paneltwo button:hover span {
+  padding-right: 25px;
+}
+
+.event-paneltwo button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
