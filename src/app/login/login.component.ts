@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-
+  errorMessage:any;
   constructor(private loginService:LoginService,private router:Router) { }
 
   login : Login={
@@ -32,7 +32,17 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.loginService.sendData(this.login).subscribe(data => {
 console.log(data);
- this.loginService.StoreToken(data);
+if(data.access_token !== ""){
+  this.loginService.StoreToken(data);
+}
+if(localStorage.getItem('access_token') !== ""){
+  this.router.navigate(['/admin']);
+}
+    },err=>{
+      this.errorMessage=err._body;
+      this.errorMessage= JSON.parse(this.errorMessage);
+      this.errorMessage=this.errorMessage.message;
+       console.log(this.errorMessage);
     });
   }
 

@@ -69,6 +69,7 @@ import { BulkcsvComponent } from './admin/bulkcsv.component';
 
 
 
+
 // const appRoutes:Routes=[
 //   {path:'home',component:HomeComponent},
 //   {path:'blog',component:BlogComponent},

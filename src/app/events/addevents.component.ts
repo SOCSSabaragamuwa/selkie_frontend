@@ -36,7 +36,7 @@ export class AddeventsComponent implements OnInit {
     
     this.eventObj.eventLocation=this.location;
     this.eventObj.date=this.datePipe.transform(this.eventObj.date,'yyyy-dd-MM');
-    this.eventObj.start_at=this.eventObj.date+"T"+this.eventObj.time+":00)";
+    this.eventObj.start_at=this.eventObj.date+"T"+this.eventObj.time+":00";
     console.log(this.eventObj.date);
     
     this.eventObj.eventLocation="lat:"+this.location.lat+",lon:"+this.location.lng;
