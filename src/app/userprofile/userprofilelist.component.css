@@ -22,6 +22,9 @@
 mat-expansion-panel-header[_ngcontent-c4]{
     height: 123px;
 }
+.form-btn{
+    margin-top: 15px;
+}
 .mat-expansion-panel-header{
     padding:64px 24px;
     
@@ -38,4 +41,34 @@ mat-expansion-panel-header[_ngcontent-c4]{
 }
 .jumbotron[_ngcontent-c4]{
 padding:24px;
+}
+.toggle-faculty{
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+
+.toggle-department{
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+.toggle-degree{
+    margin-top: 20px;
+    margin-bottom:15px;
+}
+.toggle-advanced-search{
+    margin-top:15px;
+}
+.close-card-faculty{
+    display: none;
+}
+.close-card-degree{
+
+    display: none;
+}
+.close-card-department{
+    display: none;
+}
+.close-card-advanced-search{
+    display: none;
+    
 }
