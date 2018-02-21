@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { SearchByfaculty } from './search-byfaculty';
 import { SearchByDepartment } from './search-by-department';
 import { SearchByDegree } from './search-by-degree';
-
+declare var $: any;
 
 @Component({
   selector: 'app-userprofilelist',
@@ -38,12 +38,33 @@ export class UserprofilelistComponent implements OnInit {
   // tslint:disable-next-line:whitespace
   constructor(private userService:UserService,private router:Router) { }
   ngOnInit() {
+
+    $(".toggle-faculty").click(function(){
+      $(".close-card-faculty").slideToggle();
+    });
+
+    $(".toggle-department").click(function(){
+      $(".close-card-department").slideToggle();
+    });
+
+    $(".toggle-degree").click(function(){
+      $(".close-card-degree").slideToggle();
+    });
+    $(".toggle-advanced-search").click(function(){
+      $(".close-card-advanced-search").slideToggle();
+    });
+    
     this.userService.getAllMembers().subscribe(data => this.usersList = data.users
     );
     this.userService.getAllFaculties().subscribe(data => this.faculties=data.faculties);
     this.userService.getAllDepartments().subscribe(data => this.departmetslist=data.departments);
     this.userService.getAllDegree().subscribe(data => this.degreelist=data.degrees);
 
+  }
+
+  toggle(){
+
+    
   }
 
   showUser(url:any){
