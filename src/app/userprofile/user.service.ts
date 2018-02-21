@@ -62,7 +62,7 @@ return this.http.get('/users?faculty_id=' + facId).map((response: Response) => r
 }
 getAllMembersByDepartment(depmentId:any){
 console.log(depmentId+"getAllMembersByDepartment");
-return this.http.get('/usrs?department_id='+ depmentId).map((response: Response) => response.json());
+return this.http.get('/users?department_id='+ depmentId).map((response: Response) => response.json());
 }
 getAllMembersByDegree(degreeId:any){
   console.log(degreeId+"getAllMembersByDegree");
@@ -79,10 +79,10 @@ getAllMembersBydegreeDepartmentFaculty(memberobject: any) {
       return this.http.get('/users?faculty_id=' + memberobject.facId).map((response: Response) => response.json());
     }
     if(memberobject.depId !== ""){
-      return this.http.get('/usrs?department_id='+ memberobject.depId).map((response: Response) => response.json());
+      return this.http.get('/users?department_id='+ memberobject.depId).map((response: Response) => response.json());
     }
     if(memberobject.degId !== ""){
-      return this.http.get('/usrs?degree_id='+ memberobject.degId).map((response: Response) => response.json());
+      return this.http.get('/users?degree_id='+ memberobject.degId).map((response: Response) => response.json());
     }
   }
 
