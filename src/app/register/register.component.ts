@@ -28,7 +28,8 @@ export class RegisterComponent implements OnInit {
     confirmPassword: "",
     faculty_id: "",
     department_id: "",
-    degree_id: ""
+    degree_id: "",
+    mobile:""
   }
 
   Addregister :any = {
@@ -109,6 +110,25 @@ delete this.register.password;
         if (this.register.role === '') {
           delete this.register.role;
                   }
+
+                  if (this.register.department_id === '') {
+                    delete this.register.department_id;
+                            }
+                            if(this.register.faculty_id === ''){
+                              delete this.register.faculty_id;
+                            }
+                            if(this.register.degree_id === ''){
+                              delete this.register.degree_id;
+                            }
+                            if(this.register.first_name === ''){
+                              delete this.register.first_name;
+                            }
+                            if(this.register.last_name === ''){
+                              delete this.register.last_name;
+                            }
+                            if(this.register.mobile === ''){
+                              delete this.register.mobile;
+                            }
     this.registerService.postRegister(this.register).subscribe(data => console.log(data));
   }
 
