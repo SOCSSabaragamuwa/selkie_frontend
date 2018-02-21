@@ -79,4 +79,9 @@ export class AdminComponent implements OnInit {
 
   }
 
+  showBulkCsv(){
+    this.router.navigate(['/admin/users/csv']);
+
+  }
+
 }

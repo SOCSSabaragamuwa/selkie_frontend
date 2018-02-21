@@ -87,4 +87,11 @@ getAllMembersBydegreeDepartmentFaculty(memberobject: any) {
   }
 
 }
+
+uploadCsv(url:any,formData:any){
+  let headers = new Headers();
+  // headers.append('Authorization','Barer',this.auth.getToken());
+  // headers.append('enctype','multipar/form-data');
+  return this.http.post(url,formData,{headers:headers})
+}
 }
