@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './user.service';
 import { Router } from '@angular/router';
+import { SearchByfaculty } from './search-byfaculty';
+import { SearchByDepartment } from './search-by-department';
+import { SearchByDegree } from './search-by-degree';
 
 
 @Component({
@@ -17,14 +20,14 @@ export class UserprofilelistComponent implements OnInit {
   searchMessage;
    userId;
   usersList;
-  searchfacultyResult ={
-    facId:"",
+  searchfacultyResult:SearchByfaculty ={
+    facId:0,
   }
-  searchDegreeResult ={
-    degId:"",
+  searchDegreeResult:SearchByDegree ={
+    degId:0,
   }
-  searchDepartmentResult ={
-    depId:"",
+  searchDepartmentResult : SearchByDepartment={
+    depId:0,
   }
   searchResult ={
     facId:"",
@@ -86,18 +89,18 @@ export class UserprofilelistComponent implements OnInit {
   onSearchfacultySubmit(){
     console.log(this.searchfacultyResult);
     this.usersList = [];
-    this.userService.getAllMembersByFaculty(this.searchfacultyResult.facId).subscribe(data=>this.usersList=data);
+    this.userService.getAllMembersByFaculty(this.searchfacultyResult.facId).subscribe(data=>this.usersList=data.users);
   }
 
   onSearchdepartmentSubmit(){
    console.log(this.searchDepartmentResult);
    this.usersList = [];
-   this.userService.getAllMembersByDepartment(this.searchDepartmentResult.depId).subscribe(data=>this.usersList=data);
+   this.userService.getAllMembersByDepartment(this.searchDepartmentResult.depId).subscribe(data=>this.usersList=data.users);
   }
 
   onSearchdegree(){
     console.log(this.searchDegreeResult);
     this.usersList = [];
-    this.userService.getAllMembersByDegree(this.searchDegreeResult.degId).subscribe(data=>this.usersList=data);
+    this.userService.getAllMembersByDegree(this.searchDegreeResult.degId).subscribe(data=>this.usersList=data.users);
   }
 }
