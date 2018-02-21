@@ -59,6 +59,9 @@
         transform: scale(0.5);
     } */
 }
+.error-message{
+    color: red;
+}
 
 @media only screen and (max-width:768px) {
 

@@ -85,7 +85,7 @@ export class RegisterComponent implements OnInit {
 //     { degId: 1, value: 'cis', viewValue: 'Bsc in computing and info',depId: 1 },
 //      { degId: 2, value: 'pst', viewValue: 'Nr',depId: 2 }
 //    ];
-
+errorMessage:any;
   faculties;
   departmentslistobj:any[]=[];
   // faculties = [
@@ -95,6 +95,7 @@ export class RegisterComponent implements OnInit {
   constructor(private registerService: RegisterService, public dialog: MatDialog) {
 
   }
+  
 
   ngOnInit() {
     this.registerService.getFaculties().subscribe(data => this.faculties = data.faculties);
@@ -129,7 +130,18 @@ delete this.register.password;
                             if(this.register.mobile === ''){
                               delete this.register.mobile;
                             }
-    this.registerService.postRegister(this.register).subscribe(data => console.log(data));
+    this.registerService.postRegister(this.register).subscribe( data => {
+      console.log(data);
+      // Display the received data
+      this.errorMessage="Data is inserted"
+    }, 
+     err => {
+       this.errorMessage=err._body;
+      this.errorMessage= JSON.parse(this.errorMessage);
+      this.errorMessage=this.errorMessage.message;
+       console.log(this.errorMessage);
+        // yourPopupmethod(err)
+     });
   }
 
   departmentOfFaculty(faclId: any) {
