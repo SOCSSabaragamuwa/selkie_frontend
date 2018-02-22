@@ -19,14 +19,14 @@
 }
 .event-card{
     padding: 0px;
-    height: 560px;
+    min-height: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
 
 }
 .user-card{
     padding:0px;
-    height: 560px;
+    min-width: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
    
@@ -55,6 +55,8 @@
     display: inline-block;
     color: gray;
 }
+
+
 
 .usertwo{
      padding-top: 35px;

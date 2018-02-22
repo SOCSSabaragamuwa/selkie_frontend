@@ -1,6 +1,11 @@
 .custom-style{
  margin-top: 50px;
+ 
     
+}
+
+.custom{
+  z-index: -2;
 }
 
 .card-panel{
@@ -9,7 +14,7 @@
  height: 100vh; 
  padding: 0px;
  position: fixed;
- z-index: -1;
+ z-index: 0;
 }
 
 .hidden-box{
@@ -22,6 +27,8 @@
  color: white;
 /* background-color: red; */
 }
+
+
 
 .sub-list-one{
  display:none;
