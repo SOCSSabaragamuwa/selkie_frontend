@@ -14,7 +14,7 @@ export class AdmineventlistComponent implements OnInit {
   constructor(private eventService:EventService,private router:Router) { }
 
   ngOnInit() {
-    this.eventService.getAllEventData().subscribe(data => this.eventList = data.events);
+    this.eventService.getAllEventData().subscribe(data => {this.eventList = data.events;console.log(data.events)});
     console.log(this.eventList);
   }
 
