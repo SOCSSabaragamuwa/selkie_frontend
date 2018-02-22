@@ -16,6 +16,7 @@ export class AdminhomeComponent implements OnInit {
   }
    eventList:any[]=[];
    userList:any[]=[];
+   
   ngOnInit() {
     
 
