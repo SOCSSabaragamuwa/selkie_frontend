@@ -1,7 +1,7 @@
 .content{
 text-align: center;
 padding:10px;
-animation: 2s ease-out 0s 1 captionAnimation;
+/*animation: 2s ease-out 0s 1 captionAnimation;*/
 }
 
 .info-card{
@@ -35,7 +35,7 @@ animation: 2s ease-out 0s 1 captionAnimation;
 }
  
 
-@keyframes captionAnimation{
+/*@keyframes captionAnimation{
  0%{
     transform:translateY(100px);
      opacity: 0;
@@ -44,4 +44,4 @@ animation: 2s ease-out 0s 1 captionAnimation;
     transform:translateY(0);
     opacity: 1;
     }
-}
+}*/
