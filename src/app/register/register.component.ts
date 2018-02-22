@@ -10,13 +10,13 @@ declare var $: any;
 })
 export class RegisterComponent implements OnInit {
 
-  facChooser:boolean=false;
-  depChooser:boolean=false;
-  degChooser:boolean=false;
+  facChooser: boolean = false;
+  depChooser: boolean = false;
+  degChooser: boolean = false;
   facultyID;
   departmentID;
-  departments: any[] = [{  value: 'not selected', viewValue: 'Please select a faculty' }];
-  degrees: any[]=[];
+  departments: any[] = [{ value: 'not selected', viewValue: 'Please select a faculty' }];
+  degrees: any[] = [];
   register: Register = {
     first_name: "",
     last_name: "",
@@ -29,21 +29,21 @@ export class RegisterComponent implements OnInit {
     faculty_id: "",
     department_id: "",
     degree_id: "",
-    mobile:""
+    mobile: ""
   }
 
-  Addregister :any = {
-    name:""
+  Addregister: any = {
+    name: ""
   }
 
-  AddDepartment :any = {
-    name:"",
-    faculty_id:""
+  AddDepartment: any = {
+    name: "",
+    faculty_id: ""
   }
 
-  AddDegree:any ={
-    name:"",
-    department_id:""
+  AddDegree: any = {
+    name: "",
+    department_id: ""
   }
   addFaculty() {
     console.log(this.Addregister);
@@ -58,12 +58,13 @@ export class RegisterComponent implements OnInit {
     this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
   }
 
-  addDegree(){
+  addDegree() {
     console.log(this.AddDegree);
     this.registerService.postDegree(this.AddDegree).subscribe(data => console.log(data));
     this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
   }
- 
+
+
   role = [
     { value: 'user', viewValue: 'User' },
     { value: 'moderator', viewValue: 'Moderator' }
@@ -81,13 +82,13 @@ export class RegisterComponent implements OnInit {
   // ];
   // degreeList;
   degreeList;
-//  degreeList = [
-//     { degId: 1, value: 'cis', viewValue: 'Bsc in computing and info',depId: 1 },
-//      { degId: 2, value: 'pst', viewValue: 'Nr',depId: 2 }
-//    ];
-errorMessage:any;
+  //  degreeList = [
+  //     { degId: 1, value: 'cis', viewValue: 'Bsc in computing and info',depId: 1 },
+  //      { degId: 2, value: 'pst', viewValue: 'Nr',depId: 2 }
+  //    ];
+  errorMessage: any;
   faculties;
-  departmentslistobj:any[]=[];
+  departmentslistobj: any[] = [];
   // faculties = [
   //   { facId: 1, value: 'fac', viewValue: 'Apllied sciences' },
   //   { facId: 2, value: 'fam', viewValue: 'Managment' },
@@ -95,60 +96,64 @@ errorMessage:any;
   constructor(private registerService: RegisterService, public dialog: MatDialog) {
 
   }
-  
+
 
   ngOnInit() {
     this.registerService.getFaculties().subscribe(data => this.faculties = data.faculties);
     this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
     this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
+
+
+
   }
 
   onRegister() {
+
     if (this.register.password === '') {
-delete this.register.password;
-        }
+      delete this.register.password;
+    }
 
-        if (this.register.role === '') {
-          delete this.register.role;
-                  }
+    if (this.register.role === '') {
+      delete this.register.role;
+    }
 
-                  if (this.register.department_id === '') {
-                    delete this.register.department_id;
-                            }
-                            if(this.register.faculty_id === ''){
-                              delete this.register.faculty_id;
-                            }
-                            if(this.register.degree_id === ''){
-                              delete this.register.degree_id;
-                            }
-                            if(this.register.first_name === ''){
-                              delete this.register.first_name;
-                            }
-                            if(this.register.last_name === ''){
-                              delete this.register.last_name;
-                            }
-                            if(this.register.mobile === ''){
-                              delete this.register.mobile;
-                            }
-    this.registerService.postRegister(this.register).subscribe( data => {
+    if (this.register.department_id === '') {
+      delete this.register.department_id;
+    }
+    if (this.register.faculty_id === '') {
+      delete this.register.faculty_id;
+    }
+    if (this.register.degree_id === '') {
+      delete this.register.degree_id;
+    }
+    if (this.register.first_name === '') {
+      delete this.register.first_name;
+    }
+    if (this.register.last_name === '') {
+      delete this.register.last_name;
+    }
+    if (this.register.mobile === '') {
+      delete this.register.mobile;
+    }
+    this.registerService.postRegister(this.register).subscribe(data => {
       console.log(data);
       // Display the received data
-      this.errorMessage="Data is inserted"
+      this.errorMessage = "Data is inserted"
     },
-     err => {
-       this.errorMessage=err._body;
-      this.errorMessage= JSON.parse(this.errorMessage);
-      this.errorMessage=this.errorMessage.message;
-       console.log(this.errorMessage);
+      err => {
+        this.errorMessage = err._body;
+        this.errorMessage = JSON.parse(this.errorMessage);
+        this.errorMessage = this.errorMessage.message;
+        console.log(this.errorMessage);
         // yourPopupmethod(err)
-     });
+      });
   }
 
   departmentOfFaculty(faclId: any) {
     console.log(faclId);
     this.facultyID = faclId;
     this.departmentslistobj = [];
-    this.registerService.getDepartmentByFacultyID(this.facultyID).subscribe(data => {this.departmentslistobj=data.departments });
+    this.registerService.getDepartmentByFacultyID(this.facultyID).subscribe(data => { this.departmentslistobj = data.departments });
     // if (this.facultyID) {
     //   this.departments = [];
     //   for (let i = 0; i < this.departmentList.length; i++) {
@@ -166,33 +171,33 @@ delete this.register.password;
 
   }
 
-degreeListObj :any[]=[];
+  degreeListObj: any[] = [];
   degreeOfDepartment(departmentID: any) {
     console.log(departmentID);
     this.departmentID = departmentID;
-    this.degreeListObj =[];
-    this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data=>{this.degreeListObj=data.degrees});
+    this.degreeListObj = [];
+    this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data => { this.degreeListObj = data.degrees });
   }
 
-  
-  openFacChooser(){
-    return this.facChooser=!this.facChooser;
 
-  }
-
-  openDepChooser(){
-    return this.depChooser=!this.depChooser;
+  openFacChooser() {
+    return this.facChooser = !this.facChooser;
 
   }
 
-  openDegChooser(){
-    return this.degChooser=!this.degChooser;
+  openDepChooser() {
+    return this.depChooser = !this.depChooser;
 
   }
-    
-  
+
+  openDegChooser() {
+    return this.degChooser = !this.degChooser;
+
+  }
 
 
-  
+
+
+
 
 }
