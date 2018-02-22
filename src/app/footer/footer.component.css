@@ -12,6 +12,7 @@
  padding-bottom:20px;
  font-family:"Raleway";
  background-color:  #111111;
+ z-index: 1;
  animation: 2s ease-out 0s 1 captionAnimation;
 }
 
