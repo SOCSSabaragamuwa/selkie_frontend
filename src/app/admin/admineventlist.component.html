@@ -22,9 +22,9 @@
           <div class="jumbotron">
             <i class="fa fa-map-marker icons"> &nbsp;</i>{{item.location}}
             <hr>
-            <i class="fa fa-calendar icons"> &nbsp;</i>{{item.start_at}}
+            <i class="fa fa-calendar icons"> &nbsp;</i>{{item.start_at|date:'mediumDate'}}
             <hr>
-            <i class="fa fa-clock-o icons"> &nbsp;</i>{{item.start_at}}
+            <i class="fa fa-clock-o icons"> &nbsp;</i>{{item.start_at|date:'shortTime'}}
             <hr> {{item.description}}
           </div>
           <div>
