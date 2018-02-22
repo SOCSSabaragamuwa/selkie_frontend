@@ -56,4 +56,9 @@ export class LoginService {
   LogOutdata(){
     localStorage.clear();
   }
+
+  getUserDetails(){
+    this.createAuthenticationHeader();
+    return this.http.get('/users/me', this.options).map((response: Response) => response.json());
+  }
 }

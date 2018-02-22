@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   errorMessage:any;
+  role;
   constructor(private loginService:LoginService,private router:Router) { }
 
   login : Login={
@@ -35,8 +36,14 @@ console.log(data);
 if(data.access_token !== ""){
   this.loginService.StoreToken(data);
 }
-if(localStorage.getItem('access_token') !== ""){
-  this.router.navigate(['/admin']);
+if(localStorage.getItem('access_token') !== "") {
+   this.loginService.getUserDetails().subscribe(fa => { console.log(fa);
+    if(fa.role === "user"){
+      this.router.navigate(['/user']);
+   }else{
+    this.router.navigate(['/admin']);
+   }
+  } );
 }
     },err=>{
       this.errorMessage=err._body;
