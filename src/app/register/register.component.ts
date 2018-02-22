@@ -134,7 +134,7 @@ delete this.register.password;
       console.log(data);
       // Display the received data
       this.errorMessage="Data is inserted"
-    }, 
+    },
      err => {
        this.errorMessage=err._body;
       this.errorMessage= JSON.parse(this.errorMessage);

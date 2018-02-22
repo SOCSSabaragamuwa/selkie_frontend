@@ -13,10 +13,10 @@ export class AdminhomeComponent implements OnInit {
   constructor(private eventService:EventService){
 
   }
-   eventList:Evvntobj[]=[];
+   eventList:any[]=[];
   ngOnInit() {
 
-    this.eventList=this.eventService.getAllEventData();
+    //this.eventList=this.eventService.getAllEventData();
     console.log(this.eventList);
   }
   

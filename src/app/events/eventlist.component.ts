@@ -10,16 +10,12 @@ import { Router } from '@angular/router';
 })
 export class EventlistComponent implements OnInit {
 
-    eventList:any[]=[];
+    eventList;
   constructor(private eventService:EventService,private router:Router) { }
 
   ngOnInit() {
 
-    if(this.eventList === []){
-      
-    }
-   this.eventList=== this.eventService.getAllEventData();
-    console.log(this.eventList);
+  //  this.eventList== this.eventService.getAllEventData();
   }
 
   addEvent(){

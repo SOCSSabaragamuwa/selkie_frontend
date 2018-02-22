@@ -8,24 +8,24 @@
     </mat-form-field>
   </form>
   <div class="event-container">
-    <div class="col-xs-12 col-sm-12 col-md-12 event-block" *ngFor="let item of eventList| searchfilter: 'eventName' : txtSearch.value">
+    <div class="col-xs-12 col-sm-12 col-md-12 event-block" *ngFor="let item of eventList| searchfilter: 'name' : txtSearch.value">
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{item.eventName}}
+              {{item.name}}
             </mat-panel-title>
             <mat-panel-description>
-              {{item.shortDes}}
+              {{item.description}}
             </mat-panel-description>
           </mat-expansion-panel-header>
           <div class="jumbotron">
-            <i class="fa fa-map-marker icons"> &nbsp;</i>{{item.eventLocation}}
+            <i class="fa fa-map-marker icons"> &nbsp;</i>{{item.location}}
             <hr>
-            <i class="fa fa-calendar icons"> &nbsp;</i>{{item.date}}
+            <i class="fa fa-calendar icons"> &nbsp;</i>{{item.start_at}}
             <hr>
-            <i class="fa fa-clock-o icons"> &nbsp;</i>{{item.time}}
-            <hr> {{item.longDes}}
+            <i class="fa fa-clock-o icons"> &nbsp;</i>{{item.start_at}}
+            <hr> {{item.description}}
           </div>
           <div>
 

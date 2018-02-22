@@ -24,7 +24,7 @@ export class EventsComponent implements OnInit {
       (params: any) => {
 
         this.eventid = params['id'];
-     this.eventobj=  this.eventService.getEventDetails(this.eventid);
+    //  this.eventobj=  this.eventService.getEventDetails(this.eventid);
       // console.log(this.eventobj);
       
       });
