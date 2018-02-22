@@ -72,3 +72,23 @@ padding:24px;
     display: none;
     
 }
+
+.button-conatiner{
+
+    padding-top:10px; 
+}
+
+
+.info-container{
+
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.custom-btn-color{
+    background-color:lightgreen;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
