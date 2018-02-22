@@ -1,4 +1,35 @@
-## Clone the new project named selkie-frontend.
+##Prerequisires
+
+```shell
+   node latest stable version 
+   angular cli latest  stable vesion 
+   npm latest stable version
+```
+
+##Table of content 
+*Installation(#installation)
+*Updating(#Updating your angular version)
+*Usage(#Usage selkie_frontend)
+
+
+##Instalation
+Install node js 
+Install npm
+Install angular globaly  using npm
+```shell
+   npm install -g angular-cli 
+```
+##Updating your angular version
+```shell
+   npm uninstall -g angular-cli
+   npm cache clean
+   npm install -g angular-cli 
+```
+
+
+## Usage selkie_frontend
+
+
 
 ##Clone this repo.
 ```shell
@@ -12,12 +43,12 @@ npm install
 ```
 ##  configure your web API
  Edit your web api base url to the Proxy.conf.jsons file
- web api base url is http://139.59.70.75:8090/api in the following
+ web api base url is http://localhost:8090/api in the following
 
  ```shell
 {
   "/": {
-    "target": "http://139.59.70.75:8090/api",
+    "target": "http://localhost:8090/api",
     "secure": false
   }
 }
