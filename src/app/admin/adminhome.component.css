@@ -1,31 +1,5 @@
-.card{
 
 
-   // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
- 
- 
-
-}
-.event-card{
-
-}
-
-.summary-card-container{
-    margin-top: 30px;
-}
-
-.summary-heading{
-    background-color: cadetblue;
-    margin:0px;
-    height:40px;
-    color:white;
-    padding:10px;
-}
-
-.summary-pannel{
-
-    padding: 0px;
-}
 .user-heading{
     background-color: dodgerblue;
     margin:0px;
@@ -48,14 +22,14 @@
     height: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
+
 }
 .user-card{
     padding:0px;
     height: 560px;
     background-size:100% 100%;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
+   
 }
 
 .user-panelone img{
@@ -79,6 +53,7 @@
 .userone p{
     padding-left: 15px;
     display: inline-block;
+    color: gray;
 }
 
 .usertwo{
@@ -90,6 +65,7 @@
 .usertwo p{
     padding-left: 15px;
     display: inline-block;
+    color: gray;
 }
 
 .userthree{
@@ -101,6 +77,7 @@
 .userthree p{
     padding-left: 15px;
     display: inline-block;
+    color: gray;
 }
 
 
@@ -114,6 +91,7 @@
 .userfour p{
     padding-left: 15px;
     display: inline-block;
+    color: gray;
 }
 
 .userfive{
@@ -125,6 +103,7 @@
 .userfive p{
     padding-left: 15px;
     display: inline-block;
+    color: gray;
 }
 
 .admin-home-container{
@@ -140,11 +119,71 @@
   color: #FFFFFF;
   text-align: center;
   font-size: 20px;
-  padding: 15px;
+  padding: 10px;
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 320px) {
+ .user-paneltwo button{
+       margin-left: 15px;
+       margin-top: 30px; 
+    }
+}
+
+@media screen and (min-width: 360px) {
+ .user-paneltwo button{
+       margin-left: 30px;
+       margin-top: 30px; 
+    }
+}
+
+@media screen and (min-width: 375px) {
+ .user-paneltwo button{
+       margin-left: 35px;
+       margin-top: 30px; 
+    }
+}
+
+@media screen and (width: 412px) {
+ .user-paneltwo button{
+       margin-left: 60px;
+       margin-top: 30px; 
+    }
+}
+
+
+@media screen and (min-width: 414px) {
+ .user-paneltwo button{
+       margin-left: 55px;
+       margin-top: 30px; 
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+ .user-paneltwo button{
+       margin-left: 10px; 
+       margin-top: 40px;
+    }
+}
+
+/*@media screen and (min-width: 1024px) {
+ .user-paneltwo button{
+       margin-left: 80px;
+       margin-top: 80px; 
+    }
+}*/
+
+@media screen and (min-width: 1366px) {
+ .user-paneltwo button{
+       margin-left: 80px;
+       margin-top: 80px; 
+    }
 }
 
 .user-paneltwo button span {
@@ -174,10 +213,12 @@
 
 .event-panelone{
     text-align: center;
+    color: gray;
 }
 
 .event-paneltwo{
     text-align: center;
+    color: gray;
 }
 
 .event-panelone img{
@@ -228,11 +269,12 @@
   color: #FFFFFF;
   text-align: center;
   font-size: 20px;
-  padding: 15px;
+  padding: 10px;
   width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin-top: 75px;
+   margin-bottom: 25px;
 }
 
 .event-paneltwo button span {
