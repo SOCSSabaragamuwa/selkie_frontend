@@ -34,4 +34,8 @@ export class LoginService {
     headers.append("Content-Type", "application/json");
     this.options = new RequestOptions({ headers: headers });
   }
+
+  LogOutdata(){
+    localStorage.clear();
+  }
 }
