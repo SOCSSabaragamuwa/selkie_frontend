@@ -9,7 +9,9 @@ export class LoginService {
   constructor(private http: Http) {
    }
    authToken;
+   refressToken;
    options;
+   refressoptions;
    sendData(login:any){
     console.log(login);
     return this.http.post('/oauth/token', login).map((response: Response) => response.json());
@@ -23,6 +25,21 @@ export class LoginService {
 
   getAuthenticateHeader(){
     return this.options;
+  }
+
+  getRefressTokenHeader(){
+    return this.refressoptions;
+  }
+  createRefressTokenHeader(){
+    const Token = localStorage.getItem('refresh_token');
+    this.refressToken = Token;
+    console.log("Auth Token");
+    console.log(this.refressToken);
+    const headers = new Headers();
+    const outh2 = "Bearer " +this.refressToken;
+    headers.append("authorization",outh2);
+    headers.append("Content-Type", "application/json");
+    this.refressoptions = new RequestOptions({ headers: headers });
   }
   createAuthenticationHeader(){
     const Token = localStorage.getItem('access_token');

@@ -14,7 +14,11 @@ export class AdmineventlistComponent implements OnInit {
   constructor(private eventService:EventService,private router:Router) { }
 
   ngOnInit() {
-    this.eventService.getAllEventData().subscribe(data => {this.eventList = data.events;console.log(data.events)});
+    this.eventService.getAllEventData().subscribe(data => {this.eventList = data.events;console.log(data.events);},err=>{console.log(err);
+      if(err.status === 401){
+        this.router.navigate(['/login']);
+      }
+    });
     console.log(this.eventList);
   }
 

@@ -44,7 +44,10 @@ errorobj;
         this.errorMessage = err._body.error;
         console.log(err);
         if(err.status === 401){
-          console.log("true");
+          // console.log("true");
+          // if( localStorage.getItem('access_token') !== ""){
+
+          // }
            this.router.navigate(['/login']);
         }
       // yourPopupmethod(err)
