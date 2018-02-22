@@ -26,7 +26,54 @@
 
     </div>
     <div class="row info-section">
-      <router-outlet></router-outlet>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="card col-xs-12 col-sm-12 col-md-12 info-container ">
+          <div >
+          <div class="well info col-xs-12 col-sm-12 col-md-12" >
+            <div class="col-xs-6 col-sm-6 col-md-6"> First Name </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userList.firstName}}</div>
+            <hr class="col-md-12">
+            <div class="col-xs-6 col-sm-6 col-md-6"> Last Name </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userList.lastName}}</div>
+            <hr class="col-xs-12 col-sm-12 col-md-12">
+      
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> Birth Day </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userList.date}}</div>
+            <hr class="col-md-12">
+            
+            <div class="col-xs-6 col-sm-6 col-md-6"> Gender </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userList.gender}}</div>
+            <hr class="col-md-12">
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> University </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userList.university}}</div>
+            <hr class="col-md-12">
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> Faculty  </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userList.faculty}}</div>
+            <hr class="col-md-12">
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> Department </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userList.department}}</div>
+            <hr class="col-md-12">
+      
+            
+      
+          </div>
+      
+          <div class=" button-conatiner">
+              <button mat-raised-button class="custom-btn-color" (click)="userEdit()">Edit</button>
+           </div>
+        </div>
+      
+          
+      
+          {{id}}
+      
+        </div>
+      </div>
     </div>
   </div>
 </div>
