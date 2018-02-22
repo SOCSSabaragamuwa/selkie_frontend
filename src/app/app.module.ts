@@ -57,6 +57,7 @@ import { EventComponent } from './events/event.component';
 import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
 import { DatePipe } from '@angular/common';
 import { BulkcsvComponent } from './admin/bulkcsv.component';
+import { AdminService } from './admin/admin.service';
 
 
 
@@ -142,6 +143,7 @@ import { BulkcsvComponent } from './admin/bulkcsv.component';
     LoginService,
     RegisterService,
     UserService,
+    AdminService,
     DatePipe
   ],
   bootstrap: [AppComponent]
