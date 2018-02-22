@@ -12,6 +12,8 @@ import { DatePipe } from '@angular/common';
 export class AddeventsComponent implements OnInit {
   locationobj:any;
 errorMessage;
+errorState;
+errorobj;
   eventObj: any = {
     name: "firstEvent",
     location:"location",
@@ -25,8 +27,6 @@ errorMessage;
 
 
   ngOnInit() {
-
-    
   }
   onSubmit() {
 
@@ -35,7 +35,20 @@ errorMessage;
     this.eventObj.start_at=this.eventObj.date+"T"+this.eventObj.time+":00";
     console.log(this.eventObj.date); 
     // this.eventObj.location="lat:"+this.locationobj.lat+",lon:"+this.locationobj.lng;
-    this.eventService.setMethod(this.eventObj).subscribe(data => { console.log(data); }, err => {console.log(err); } );
+    this.eventService.setMethod(this.eventObj).subscribe(data => {
+      console.log(data);
+      // Display the received data
+      this.errorMessage = "Data is inserted"
+    },
+      err => {
+        this.errorMessage = err._body.error;
+        console.log(err);
+        if(err.status === 401){
+          console.log("true");
+           this.router.navigate(['/login']);
+        }
+      // yourPopupmethod(err)
+      } );
     console.log(this.eventObj);
     // this.router.navigate(['admin/event'])
   }

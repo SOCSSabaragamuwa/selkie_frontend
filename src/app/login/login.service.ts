@@ -17,6 +17,7 @@ export class LoginService {
 
   StoreToken(Token:any){
     localStorage.setItem('access_token', Token.access_token);
+    localStorage.setItem('refresh_token',Token.refresh_token);
     console.log(localStorage.getItem('access_token'));
   }
 

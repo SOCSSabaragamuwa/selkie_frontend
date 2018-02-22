@@ -153,7 +153,7 @@ export class RegisterComponent implements OnInit {
     console.log(faclId);
     this.facultyID = faclId;
     this.departmentslistobj = [];
-    this.registerService.getDepartmentByFacultyID(this.facultyID).subscribe(data => { this.departmentslistobj = data.departments });
+    this.registerService.getDepartmentByFacultyID(this.facultyID).subscribe(data => { this.departmentslistobj = data.departments; });
     // if (this.facultyID) {
     //   this.departments = [];
     //   for (let i = 0; i < this.departmentList.length; i++) {
@@ -176,7 +176,7 @@ export class RegisterComponent implements OnInit {
     console.log(departmentID);
     this.departmentID = departmentID;
     this.degreeListObj = [];
-    this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data => { this.degreeListObj = data.degrees });
+    this.registerService.getDegreeByDepartmentID(this.departmentID).subscribe(data => { this.degreeListObj = data.degrees; });
   }
 
 
