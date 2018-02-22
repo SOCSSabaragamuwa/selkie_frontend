@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Evvntobj } from '../events/evvntobj';
 import { EventService } from '../events/event.service';
+import { AdminService } from './admin.service';
 
 @Component({
   selector: 'app-adminhome',
@@ -10,13 +11,15 @@ import { EventService } from '../events/event.service';
 })
 export class AdminhomeComponent implements OnInit {
 
-  constructor(private eventService:EventService){
+  constructor(private eventService:EventService,private adminService:AdminService){
 
   }
    eventList:any[]=[];
+   userList:any[]=[];
   ngOnInit() {
+    
 
-    //this.eventList=this.eventService.getAllEventData();
+    this.adminService.getAllUsers().subscribe(data=>{this.userList=data.users;},err=>console.log(err));
     console.log(this.eventList);
   }
   
