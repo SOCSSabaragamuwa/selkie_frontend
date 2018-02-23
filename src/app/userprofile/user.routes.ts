@@ -6,9 +6,11 @@ import { UsereditComponent } from "./useredit.component";
 
 export const  UserRouting: Routes = [
     { path:'',component: UserprofileComponent},
-    { path:':id',component: UserdetailComponent},
+
+    { path:':id',component: UserprofileComponent},
+
     { path: 'edit/:id', component:UsereditComponent },
-    { path: ':id', component:UserprofileComponent },
+    // { path: ':id', component:UserprofileComponent },
   
     
     
