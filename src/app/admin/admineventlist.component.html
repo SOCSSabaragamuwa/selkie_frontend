@@ -13,19 +13,47 @@
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{item.name}}
+              <div *ngIf="item.name">
+                  {{item.name}}
+              </div>
+             
             </mat-panel-title>
             <mat-panel-description>
-              {{item.description}}
+
+              <div *ngIf="item.description"> 
+                  {{item.description}}
+                  <br>
+                  <br>
+              </div>
+             
             </mat-panel-description>
           </mat-expansion-panel-header>
           <div class="jumbotron">
-            <i class="fa fa-map-marker icons"> &nbsp;</i>{{item.location}}
-            <hr>
+            <div *ngIf="item.location">
+                <i class="fa fa-map-marker icons"> &nbsp;</i>{{item.location}}
+                <br>
+                <br>
+            </div>
+            
+          
+            <div *ngIf="item.start_at">
             <i class="fa fa-calendar icons"> &nbsp;</i>{{item.start_at|date:'mediumDate'}}
-            <hr>
+            <br>
+            <br>
+            </div>
+           
+            <div *ngIf="item.start_at">
             <i class="fa fa-clock-o icons"> &nbsp;</i>{{item.start_at|date:'shortTime'}}
-            <hr> {{item.description}}
+            <br>
+            <br>
+            </div>
+           
+            <div *ngIf="item.description" >
+                {{item.description}}
+                <br>
+                <br>
+            </div>
+             
           </div>
           <div>
 

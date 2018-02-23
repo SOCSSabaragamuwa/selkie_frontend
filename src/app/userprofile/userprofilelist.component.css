@@ -92,3 +92,25 @@ padding:24px;
 .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+.search-button-container{
+    text-align: right;
+}
+
+.search-input{
+
+    margin-top: 20px;
+}
+
+.search-options{
+
+    display: none;
+}
+
+.advanced-search-btn{
+    margin-top: 20px;
+}
+
+.user-card-pallet{
+
+    margin-top: 10px;
+}
