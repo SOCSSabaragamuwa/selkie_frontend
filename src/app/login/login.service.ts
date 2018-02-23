@@ -49,7 +49,7 @@ export class LoginService {
     const headers = new Headers();
     const outh2 = "Bearer " +this.authToken;
     headers.append("authorization",outh2);
-    headers.append("Content-Type", "application/json");
+    headers.append("Content-Type", "application/x-www-form-urlencoded");
     this.options = new RequestOptions({ headers: headers });
   }
 

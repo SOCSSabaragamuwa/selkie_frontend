@@ -63,12 +63,13 @@ html {box-sizing: border-box;}
 }
 
 .info p{
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
 .info h2{
   text-align: center;
+  font-size: 40px;
 }
 
 .images{
@@ -249,6 +250,10 @@ html,body,div,span,applet,object,iframe,blockquote,pre,a,abbr,acronym,address,bi
       margin: 0px;
       
 }*/
+.info{
+
+  font-size: 60px;
+ }
 }
 
 @media only screen and (max-width:500px){
