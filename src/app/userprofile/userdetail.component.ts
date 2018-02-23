@@ -4,6 +4,7 @@ import { User } from './user';
 import { UserService } from './user.service';
 import { UserprofileComponent } from './userprofile.component';
 import { UserprofilelistComponent } from './userprofilelist.component';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-userdetail',
@@ -13,13 +14,24 @@ import { UserprofilelistComponent } from './userprofilelist.component';
 export class UserdetailComponent implements OnInit {
    userId:any;
   userList:User;
-  constructor( private router:Router,private userService:UserService) { }
+  userObj:any;
+  message = "sssssss";
+  constructor( private router:Router,private userService:UserService,private loginService:LoginService) { }
 
   ngOnInit() {
 
-    this.userList=this.userService.getUserList();
-    console.log(this.userList);
     this.userId=window.location.href;
+    let url:any[];
+    url=this.userId.split("/");
+    this.userId=url[url.length-1];
+    console.log(this.userId);    
+    if(this.userId){
+      this.loginService.getUserById(this.userId).subscribe(data => this.userObj = data);
+      
+    }else{
+      this.loginService.getUserDetails().subscribe(data => this.userObj = data);
+console.log("else");
+    }
   
   }
 userEdit(){

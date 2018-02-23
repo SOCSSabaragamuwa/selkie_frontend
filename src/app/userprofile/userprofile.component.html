@@ -13,7 +13,7 @@
 
 
           <div class="data-section">
-            <h2 class="short-profile-heading">{{userList.firstName+" "+userList.lastName }}</h2>
+            <!-- <h2 class="short-profile-heading">{{userObj.first_name+" "+userObj.last_name }}</h2> -->
 
 
 
@@ -26,7 +26,54 @@
 
     </div>
     <div class="row info-section">
-      <router-outlet></router-outlet>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+
+        <div class="card col-xs-12 col-sm-12 col-md-12 info-container ">
+          <div >
+          <div class="well info col-xs-12 col-sm-12 col-md-12" >
+
+            <!-- <div class="col-xs-6 col-sm-6 col-md-6"> First Name </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userObj.first_name}}</div>
+            <hr class="col-md-12">
+            <div class="col-xs-6 col-sm-6 col-md-6"> Last Name </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userObj.last_name}}</div>
+            <hr class="col-xs-12 col-sm-12 col-md-12">
+      
+       -->
+            <div class="col-xs-6 col-sm-6 col-md-6"> Email </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userObj.email}}</div>
+            <hr class="col-md-12">
+            
+            <!-- <div class="col-xs-6 col-sm-6 col-md-6"> Faculty  </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">{{userObj.faculty.name}}</div>
+            <hr class="col-md-12">
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> department </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userObj.department.name}}</div>
+            <hr class="col-md-12">
+      
+            <div class="col-xs-6 col-sm-6 col-md-6"> degree  </div>
+            <div class="col-xs-6 col-sm-6 col-md-6"> {{userObj.degree.name}}</div>
+            <hr class="col-md-12"> -->
+      
+            
+
+      
+            
+      
+          </div>
+      
+          <div class=" button-conatiner">
+              <button mat-raised-button class="custom-btn-color" (click)="userEdit()">Edit</button>
+           </div>
+        </div>
+      
+          
+      
+          {{id}}
+      
+        </div>
+      </div>
     </div>
   </div>
 </div>

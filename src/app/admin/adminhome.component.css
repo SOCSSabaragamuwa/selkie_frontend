@@ -31,7 +31,9 @@
     background-repeat: no-repeat;
    
 }
-
+.user-panelone{
+    min-height: 300px;
+}
 .user-panelone img{
     width: 30%;
     height: 30%;
@@ -216,6 +218,7 @@
 .event-panelone{
     text-align: center;
     color: gray;
+   min-height:300px;
 }
 
 .event-paneltwo{
@@ -224,8 +227,8 @@
 }
 
 .event-panelone img{
-    width: 70%;
-    height: 70%;
+    width: 30%;
+    height: 30%;
 }
 
 .event-paneltwo img{
@@ -235,8 +238,9 @@
 
 .eventone{
      border-bottom: 2px solid firebrick;
-     padding-bottom: 15px;
-      padding-top: 15px;
+     padding-bottom: 35px;
+      padding-top: 45px;
+      
 }
 
 .eventtwo{
@@ -247,8 +251,8 @@
 
 .eventthree{
      border-bottom: 2px solid firebrick;
-     padding-bottom: 15px;
-      padding-top: 15px;
+     padding-bottom: 35px;
+      padding-top: 35px;
 }
 
 .eventone p {
