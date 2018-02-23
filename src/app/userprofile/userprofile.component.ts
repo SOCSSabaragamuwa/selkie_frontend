@@ -12,9 +12,11 @@ import { LoginService } from '../login/login.service';
 })
 export class UserprofileComponent implements OnInit {
 
+  
   userId:any;
-userObj;
-  constructor(private userService: UserService,private loginService:LoginService ) { }
+// userObj:any;
+@Output() userObj = new EventEmitter<any>();
+  constructor(private userService: UserService,private loginService:LoginService,private router:Router ) { }
 
 
 
@@ -28,11 +30,15 @@ userObj;
    // this.loginService.getUserById(this.userId).subscribe(data => { console.log(data); });
    if(this.userId == "user"){
      console.log("user by id");
-     this.loginService.getUserDetails().subscribe(data => { this.userObj = data ;} );
+     this.loginService.getUserDetails().subscribe(data => { this.userObj = data;},err=> {console.log(err);
+      if(err.status === 401){
+        this.router.navigate(['/login']);
+      }
+    });
      
    }else{
      console.log("user by login");
-     this.loginService.getUserById(this.userId).subscribe(data => { this.userObj = data ;} );
+     this.loginService.getUserById(this.userId).subscribe(data => this.userObj = data);
      
    }
 

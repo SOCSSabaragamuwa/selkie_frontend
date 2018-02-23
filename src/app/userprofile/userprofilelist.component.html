@@ -1,6 +1,15 @@
 <h1>User Profiles</h1>
 
-<div class=" col-xs-12 col-sm-12 col-md-12 ">
+<div class="search-button-container">
+  <button mat-mini-fab color="primary" class="search-call">
+    <span class="fa fa-search"></span>
+  </button>
+
+</div>
+<br>
+<br>
+
+<div class=" col-xs-12 col-sm-12 col-md-12 search-options well ">
 
 
 
@@ -88,15 +97,8 @@
     </div>
   </div>
 
-
-</div>
-
-
-
-
-<div class=" col-xs-12 col-sm-12 col-md-12">
-  <div class="col-xs-12 col-sm-12 col-md-12  ">
-    <div class="col-xs-12 col-sm-12 col-md-3 btn btn-success toggle-advanced-search ">Advanced search</div>
+  <div class="col-xs-12 col-sm-12 col-md-12 ">
+    <div class=" col-xs-12 col-sm-12 col-md-3 btn btn-success toggle-advanced-search ">Advanced search</div>
     <br>
 
     <br>
@@ -104,7 +106,7 @@
       <form (ngSubmit)="onSubmit()">
         <div>
 
-          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+          <mat-form-field class="col-xs-12 col-sm-2 col-md-2">
             <mat-select placeholder="Faculty" name="faculty " [(ngModel)]="searchResult.facId">
 
               <mat-option *ngFor="let faculty of faculties" [value]="faculty.id" (click)="departmentOfFaculty(faculty.id)">
@@ -119,7 +121,7 @@
 
 
 
-          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+          <mat-form-field class="col-xs-12 col-sm-2 col-md-2">
             <mat-select placeholder="Department" name="department" [(ngModel)]="searchResult.depId">
 
               <mat-option *ngFor="let department of departmetslist" [value]="department.id" (click)="degreeOfDepartment(department.id)">
@@ -132,7 +134,7 @@
 
 
 
-          <mat-form-field class="col-xs-10 col-sm-2 col-md-2">
+          <mat-form-field class="col-xs-12 col-sm-2 col-md-2">
             <mat-select placeholder="Degree" name="degree" [(ngModel)]="searchResult.degId">
 
               <mat-option *ngFor="let degreeobj of degreelist" [value]="degreeobj.id" (click)="degreeClick(degreeobj.id)">
@@ -142,13 +144,13 @@
 
             </mat-select>
           </mat-form-field>
-          <div class=" col-xs-10 col-sm-4 col-md-4">
-            <input type="text" class="form-control col-xs-10 col-sm-12 col-md-12" name="txtName" [(ngModel)]="searchResult.txtName">
+          <div class=" col-xs-12 col-sm-4 col-md-4">
+            <input type="text" class="form-control col-xs-10 col-sm-12 col-md-12 search-input" name="txtName" [(ngModel)]="searchResult.txtName">
           </div>
 
-          <div class="col-xs-10 col-sm-2 col-md-2 ">
+          <div class="col-xs-10 col-sm-2 col-md-2  advanced-search-btn">
             <button class="btn btn-primary">
-              <span class="fa fa-search"></span>
+              <span class=" fa fa-search"></span>
             </button>
           </div>
 
@@ -160,70 +162,84 @@
     <div class="row">
       {{searchMessage}}
     </div>
-    <div class="example-container">
 
-      <div class="col-lg-12">
-        <mat-accordion *ngFor="let user of usersList">
+
+  </div>
+</div>
+
+
+
+
+<div class=" col-xs-12 col-sm-12 col-md-12">
+  <div class="col-xs-12 col-sm-12 col-md-12  ">
+
+
+
+
+
+
+
+    
+
+      <div class="col-xs-12 col-sm-12 col-md-6 user-card-pallet " *ngFor="let user of usersList">
+        <mat-accordion >
 
           <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
 
               <mat-panel-title>
 
-                <!-- <img src="../assets/images/user2.jpg" alt="user"> -->
+
               </mat-panel-title>
 
               <mat-panel-description>
-                <!-- {{user.first_name}}  <br><br> -->
+
                 {{user.email}}
-                <br>
-                <br>
+                
 
               </mat-panel-description>
             </mat-expansion-panel-header>
-            <div class="mat-expansion-panel-body">
+            
 
-              <div _ngcontent-c9="" class="jumbotron ">
-
-                <div class="col-md-6">
-                  <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
-
-                  Personal Details
-                  <br>
-                  <mat-divider></mat-divider>
-                  <br>
-                  <!-- First Name:   {{user.first_name}} <br>
-                                Last Name:   {{user.last_name}} <br> -->
-
-                  BOD:
-                  <br> Gender
-                  <br>
-                  <br>
+              <div class="well ">
+                
+                <div *ngIf="user.email">
+                  Email : {{user.email}}
+                  
                 </div>
-                <div class="col-md-6">
-                  <i _ngcontent-c9="" class="fa fa-user"> &nbsp;</i>
-
-                  University Details
-                  <br>
-                  <mat-divider></mat-divider>
-                  <br>
-                  <!-- Batch:{{user.batch}} <br> -->
-                  <!-- <div *ngIf="user.faculty.name">
-                                  Faculty: {{user.faculty.name}} <br>
-                                </div> -->
-                  <!-- Faculty: {{user.faculty.name}} <br>
-                               
-                                 Department:{{user.department.name}} <br>
-                                Degree program :{{user.degree.name}}<br><br> -->
-
+                <hr>
+                <div *ngIf="user.first_name">
+                 First Name : {{user.first_name}}
                 </div>
+                <hr>
 
-                <button class="btn btn-danger">Delete</button>
-                <button class="btn btn-success ">Edit</button>
-                <button class="btn btn-primary " (click)="showUser(user.self)">User profile</button>
+                <div *ngIf="user.last_name">
+                    Last Name :{{user.last_name}}
+                  </div>
+                  <hr>
+
+                  <div *ngIf="user.faculty">
+                     Faculty:{{user.faculty.name}}
+                  </div>
+                  <hr>
+
+                  <div *ngIf="user.department">
+                     Department: {{user.department.name}}
+                  </div>
+                  <hr>
+                  <div *ngIf="user.degree">
+                     Degree :{{user.degree.name}}
+                  </div>
+                  <hr>
+                  <div *ngIf="user.batch">
+                      Batch: {{user.batch}}
+                  </div>
+
+                  <button class="btn btn-primary " (click)="showUser(user.self)">User profile</button>
               </div>
 
-            </div>
+
+              
 
 
           </mat-expansion-panel>
@@ -232,7 +248,7 @@
 
       </div>
 
-    </div>
+  
 
   </div>
 </div>
