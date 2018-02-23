@@ -9,6 +9,9 @@
     height: 500px;
     padding: 50px;
     background-image: url(../../assets/appside.jpg);
+
+   
+	
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -67,4 +70,8 @@
 .imgset{
     padding-left: 100px;
     padding-right: 100px;
+}
+.wow {
+
+    width:500px;
 }
