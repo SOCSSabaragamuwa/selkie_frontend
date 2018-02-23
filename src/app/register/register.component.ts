@@ -13,6 +13,9 @@ export class RegisterComponent implements OnInit {
   facChooser: boolean = false;
   depChooser: boolean = false;
   degChooser: boolean = false;
+  errorFaculty;
+  errorDepartment;
+  errorDegree;
   facultyID;
   departmentID;
   departments: any[] = [{ value: 'not selected', viewValue: 'Please select a faculty' }];
@@ -47,20 +50,41 @@ export class RegisterComponent implements OnInit {
   }
   addFaculty() {
     console.log(this.Addregister);
-    this.registerService.postFaculty(this.Addregister).subscribe(data => console.log(data));
+    this.registerService.postFaculty(this.Addregister).subscribe(data => {console.log(data);
+      this.errorFaculty="Data inserted";
+    },err=>{
+      this.errorFaculty = err._body;
+      this.errorFaculty = JSON.parse(this.errorFaculty);
+      this.errorFaculty = this.errorFaculty.message;
+      console.log(this.errorFaculty);
+    });
     this.registerService.getFaculties().subscribe(data => this.faculties = data.faculties);
   }
 
   addDepartment() {
     console.log(this.AddDepartment);
-    this.registerService.postDepartment(this.AddDepartment).subscribe(data => console.log(data));
+    this.registerService.postDepartment(this.AddDepartment).subscribe(data => {console.log(data);
+      this.errorDepartment="Data inserted";
+    },err=>{
+      this.errorDepartment = err._body;
+      this.errorDepartment = JSON.parse(this.errorDepartment);
+      this.errorDepartment = this.errorDepartment.message;
+      console.log(this.errorDepartment);
+    });
     // this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
     this.registerService.getDepartments().subscribe(data => this.departmentList = data.departments);
   }
 
   addDegree() {
     console.log(this.AddDegree);
-    this.registerService.postDegree(this.AddDegree).subscribe(data => console.log(data));
+    this.registerService.postDegree(this.AddDegree).subscribe(data => {console.log(data);
+      this.errorDegree="Data inserted";
+    },err=>{
+      this.errorDegree = err._body;
+      this.errorDegree = JSON.parse(this.errorDegree);
+      this.errorDegree = this.errorDegree.message;
+      console.log(this.errorDegree);
+    });
     this.registerService.getDegrees().subscribe(data => this.degrees = data.degrees);
   }
 
