@@ -2,83 +2,76 @@ didddddi hihihhid
 <div class="container-fluid custom-style">
     <div class="row custom-row-style">
 
-        <div class="col-xs-12 col-sm-12 col-md-12 ">
-            <div class="col-lg-4 col-md-9 col-sm-12 col-xs-12 slidetwo">
-                <!--<div class="col-xs-12 col-sm-12 col-md-12 label">
-              <h1>Stay</h1>
-              <h1>Connect..</h1>
-        </div>-->
-                <img src="" alt="" class="col-xs-12 col-sm-12 col-md-12 slider">
+
+        
+
+
+
+        <div class="col-lg-4 col-md-4  col-sm-4 col-xs-12  col-md-push-4 col-sm-push-4 box">
+
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img">
+                    <img src="../../assets/lg.png" alt="" class="col-xs-12 col-sm-12 col-md-12 login_icon">
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12 box">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
-                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
-                        <img src="../../assets/lg.png" alt="" class="col-xs-12 col-sm-12 col-md-12 login_icon">
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 
+
+            <form class=" example-form" (ngSubmit)="onSubmit()" #f="ngForm">
+                <div>
+                    <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
+                            <mat-placeholder class="place-holder"> email</mat-placeholder>  
+                        <input type="text" matInput  name="username" [(ngModel)]="login.username" #username="ngModel" required>
+
+
+                    </mat-form-field>
                 </div>
-                <form class=" example-form" (ngSubmit)="onSubmit()" #f="ngForm">
-                    <div>
-                        <mat-form-field class="example-full-width col-xs-12 col-sm-12 col-md-12">
-                            <input type="text" matInput placeholder="UserName" name="username" [(ngModel)]="login.username" #username="ngModel" required>
 
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                    <mat-error *ngIf="username.touched">
+                        <mat-error *ngIf="username.errors?.required">
 
-                        </mat-form-field>
-                    </div>
-
-                    <div class="col-xs-12 col-md-12 col-lg-12">
-                        <mat-error *ngIf="username.touched">
-                            <mat-error *ngIf="username.errors?.required">
-
-                                Username is
-                                <strong>required</strong>
-                            </mat-error>
-                            <!-- <mat-error *ngIf="username.errors?.pattern">
+                            Email is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!-- <mat-error *ngIf="username.errors?.pattern">
 
                             Username is
                             <strong>Invalid</strong>
                         </mat-error> -->
 
-                        </mat-error>
-                    </div>
-                    <div>
-                        <mat-form-field class="example-full-width  col-xs-12 col-sm-12 col-md-12">
-                            <input type="password" matInput placeholder="password" name="password" [(ngModel)]="login.password" #password="ngModel" required
-                                minlength="6" maxlength="8">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-xs-12 col-md-12 col-lg-12">
-                        <mat-error *ngIf="password.touched">
-                            <mat-error *ngIf="password.errors?.required">
+                    </mat-error>
+                </div>
+                <div>
+                    <mat-form-field class="example-full-width  col-xs-12 col-sm-12 col-md-12">
+                            <mat-placeholder class="place-holder">password</mat-placeholder>  
+                        <input type="password" matInput  name="password" [(ngModel)]="login.password" #password="ngModel" required
+                            minlength="6" maxlength="8">
+                    </mat-form-field>
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-12">
+                    <mat-error *ngIf="password.touched">
+                        <mat-error *ngIf="password.errors?.required">
 
-                                password is
-                                <strong>required</strong>
-                            </mat-error>
-                            <!-- <mat-error *ngIf="username.errors?.pattern">
+                            password is
+                            <strong>required</strong>
+                        </mat-error>
+                        <!-- <mat-error *ngIf="username.errors?.pattern">
 
                         Username is
                         <strong>Invalid</strong>
                     </mat-error> -->
 
-                        </mat-error>
-                    </div>
-                    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 button-container ">
-                        <button class="button" mat-raised-button color="warn">Login</button>
-                    </div>
-                    {{errorMessage}}
-                </form>
-            </div>
-
-            <div class="col-lg-4 col-md-9 col-sm-12 col-xs-12 slidetwo">
-                <!--<div class="col-xs-12 col-sm-12 col-md-12 label">
-              <h1>Stay</h1>
-              <h1>Connect..</h1>
-        </div>-->
-                <img src="" alt="" class="col-xs-12 col-sm-12 col-md-12 slider">
-            </div>
+                    </mat-error>
+                </div>
+                <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 button-container ">
+                    <button class="button" mat-raised-button color="warn">Login</button>
+                </div>
+                {{errorMessage}}
+            </form>
         </div>
+
+
+       
+
 
 
     </div>
