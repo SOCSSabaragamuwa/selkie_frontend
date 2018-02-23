@@ -53,6 +53,9 @@ export class UserprofilelistComponent implements OnInit {
     $(".toggle-advanced-search").click(function(){
       $(".close-card-advanced-search").slideToggle();
     });
+    $(".search-call").click(function(){
+      $(".search-options").slideToggle();
+    });
     
     this.userService.getAllMembers().subscribe(data => this.usersList = data.users
     );

@@ -68,8 +68,14 @@
     .custom-form-style{
         margin-top: 100px;
         
+        
           
        }
     
+}
+
+.expand-button-container{
+    padding-top:19px;
+    padding-left:2px;
 }
 
