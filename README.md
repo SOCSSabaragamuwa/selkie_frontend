@@ -53,7 +53,26 @@ npm install
   }
 }
 ```
+##Oath 2 configuration
+If You want to configure oath 2 for your specifcations move into the
 
+```shell
+selkie_frontend/src/app/login/login.component.ts
+```
+observe
+
+```shell
+
+ login : Login={
+    username:"",
+    password:"",
+    grant_type:"password",
+    client_id:"2",
+    client_secret:"ZACAZyPfwyGdhtvhr6ARaZFzWn0uPaDXi7RSCBIb",
+  }
+
+```
+change the client_id and client_secret for your specifications
 ##Run this project
 ```shell
 npm start
