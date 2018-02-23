@@ -31,6 +31,7 @@
     "jquery": "^3.3.1",
     "ng-scrollreveal": "^2.2.0",
     "ng4-geoautocomplete": "^0.1.0",
+    "ngx-pagination": "^3.1.0",
     "rxjs": "^5.5.2",
     "scrollreveal": "^3.3.6",
     "wowjs": "^1.1.3",

@@ -8,7 +8,7 @@
     </mat-form-field>
   </form>
   <div class="event-container">
-    <div class="col-xs-12 col-sm-12 col-md-12 event-block" *ngFor="let item of eventList| searchfilter: 'name' : txtSearch.value">
+    <div class="col-xs-12 col-sm-12 col-md-12 event-block" *ngFor="let item of eventList| paginate: { itemsPerPage: 10, currentPage: p }| searchfilter: 'name' : txtSearch.value">
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
@@ -72,5 +72,17 @@
 
 
   </div>
+
+
+  <div class="col-xs-12 col-sm-12 col-md-12">
+
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      </div>
+      <pagination-controls class="col-xs-12 col-sm-6 col-md-6" (pageChange)="p = $event"></pagination-controls>
+      <div class="col-xs-0 col-sm-0 col-md-0">
+  
+      </div>
+    </div>
 
 </div>

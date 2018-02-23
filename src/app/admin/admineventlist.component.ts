@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admineventlist.component.css']
 })
 export class AdmineventlistComponent implements OnInit {
-
+  p:any=1;
   eventList:any[]=[];
   constructor(private eventService:EventService,private router:Router) { }
 
