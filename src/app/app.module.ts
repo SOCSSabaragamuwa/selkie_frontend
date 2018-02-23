@@ -12,6 +12,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 
@@ -131,7 +132,7 @@ import { AdminService } from './admin/admin.service';
     MatNativeDateModule,
     MatListModule,
     MatDividerModule,
-
+    NgxPaginationModule,
     MatTabsModule,
     MatExpansionModule,
     MatSelectModule,

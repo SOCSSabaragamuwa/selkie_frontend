@@ -12,6 +12,7 @@ declare var $: any;
   styleUrls: ['./userprofilelist.component.css']
 })
 export class UserprofilelistComponent implements OnInit {
+  p: number = 1;
   faculties:any[]=[];
   departmetslist :any[] =[];
   degreelist:any[]= [];

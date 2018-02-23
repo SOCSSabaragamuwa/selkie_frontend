@@ -179,76 +179,89 @@
 
 
 
-    
-
-      <div class="col-xs-12 col-sm-12 col-md-6 user-card-pallet " *ngFor="let user of usersList">
-        <mat-accordion >
-
-          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-
-              <mat-panel-title>
 
 
-              </mat-panel-title>
+    <div class="col-xs-12 col-sm-12 col-md-6 user-card-pallet " *ngFor="let user of usersList | paginate: { itemsPerPage: 10, currentPage: p }">
+      <mat-accordion>
 
-              <mat-panel-description>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
 
-                {{user.email}}
-                
-
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            
-
-              <div class="well ">
-                
-                <div *ngIf="user.email">
-                  Email : {{user.email}}
-                  
-                </div>
-                <hr>
-                <div *ngIf="user.first_name">
-                 First Name : {{user.first_name}}
-                </div>
-                <hr>
-
-                <div *ngIf="user.last_name">
-                    Last Name :{{user.last_name}}
-                  </div>
-                  <hr>
-
-                  <div *ngIf="user.faculty">
-                     Faculty:{{user.faculty.name}}
-                  </div>
-                  <hr>
-
-                  <div *ngIf="user.department">
-                     Department: {{user.department.name}}
-                  </div>
-                  <hr>
-                  <div *ngIf="user.degree">
-                     Degree :{{user.degree.name}}
-                  </div>
-                  <hr>
-                  <div *ngIf="user.batch">
-                      Batch: {{user.batch}}
-                  </div>
-
-                  <button class="btn btn-primary " (click)="showUser(user.self)">User profile</button>
-              </div>
+            <mat-panel-title>
 
 
-              
+            </mat-panel-title>
+
+            <mat-panel-description>
+
+              {{user.email}}
 
 
-          </mat-expansion-panel>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
 
-        </mat-accordion>
 
-      </div>
+          <div class="well ">
 
-  
+            <div *ngIf="user.email">
+              Email : {{user.email}}
+
+            </div>
+            <hr>
+            <div *ngIf="user.first_name">
+              First Name : {{user.first_name}}
+            </div>
+            <hr>
+
+            <div *ngIf="user.last_name">
+              Last Name :{{user.last_name}}
+            </div>
+            <hr>
+
+            <div *ngIf="user.faculty">
+              Faculty:{{user.faculty.name}}
+            </div>
+            <hr>
+
+            <div *ngIf="user.department">
+              Department: {{user.department.name}}
+            </div>
+            <hr>
+            <div *ngIf="user.degree">
+              Degree :{{user.degree.name}}
+            </div>
+            <hr>
+            <div *ngIf="user.batch">
+              Batch: {{user.batch}}
+            </div>
+
+            <button class="btn btn-primary " (click)="showUser(user.self)">User profile</button>
+          </div>
+
+
+
+
+
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </div>
+
+
 
   </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12">
+
+    <div class="col-xs-0 col-sm-3 col-md-3">
+      &nbsp; &nbsp; &nbsp; &nbsp;
+    </div>
+    <pagination-controls class="col-xs-12 col-sm-12 col-md-6" (pageChange)="p = $event"></pagination-controls>
+    <div class="col-xs-0 col-sm-0 col-md-0">
+
+      </div>
+  </div>
+  
+
 </div>
