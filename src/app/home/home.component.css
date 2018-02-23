@@ -11,7 +11,7 @@ padding:10px;
 }
 
 .recent-info-pallet{
- padding: 10px;
+ padding: 0px;
 }
 
 .card-spec h2{
@@ -31,7 +31,7 @@ padding:10px;
 }
 
 .spacer{
- height:60px;
+ height:50px;
 }
  
 
@@ -45,3 +45,142 @@ padding:10px;
     opacity: 1;
     }
 }*/
+
+/*general styles*/
+
+/*body{padding: 3em;background-color: #ccc;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}*/
+
+
+/*slideshow styles*/
+
+.slideshow {
+  padding: 0px;
+  width: 1350px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideshow-container {
+  padding: 0px;
+  width: 5400px;
+  font-size: 0;
+  transition: 1s ease;
+  height: 450px;
+}
+
+.slideshow-container:hover {
+  animation-play-state: paused;
+}
+
+img, .text-container {
+  width: 1350px;
+  height: auto;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text-container {
+  height: 225px;
+  position: relative;
+}
+
+
+/*p {
+  position: relative;
+  top: -45%;
+  padding: 5px;
+}*/
+
+.slide {
+  overflow: hidden;
+  animation: slide 24s ease infinite;
+  padding: 0px;
+  z-index: 10px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  12.5% {
+    transform: translateX(0%);
+  }
+  
+  25% {
+    transform: translateX(-25%);
+  }
+  
+  37.5% {
+    transform: translateX(-25%);
+  }
+  
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  62.5% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-75%);
+  }
+  
+  87.5% {
+    transform: translateX(-75%);
+  }
+  
+  99% {
+    transform: translateX(-75%);
+  }
+  
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*.p {
+  margin-top: 140px;
+  text-align: center;
+}*/
+.slider{
+  width: 100%;
+  padding: 0px;
+}
+
+.info{
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.info p{
+  font-size: 18px;
+  text-align: center;
+}
+
+.info h2{
+  text-align: center;
+}
+
+.images{
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.image{
+  padding: 0px;
+  margin: 0px;
+}
+
+.image img{
+  width: 100%;
+}

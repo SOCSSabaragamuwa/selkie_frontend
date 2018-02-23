@@ -1,6 +1,6 @@
 .custom-style{
  
-    padding-top: 1px;
+    /*padding-top: 1px;*/
  
 }
 .whole{
@@ -9,9 +9,9 @@
 }
 
 .custom-row-style{
-    margin-top: 70px;
+    /*margin-top: 70px;
     margin-bottom:20px;
-    padding: auto;
+    padding: auto;*/
   
 }
 
@@ -29,10 +29,16 @@
 }
 
 .box{
-    padding-top:10px;
-    min-height: 500px;
- 
+    background-color: white;
+    padding:40px;
+    /*min-height: 500px;*/
+    margin-top: 50px;
+    margin-bottom: 20px;
+    opacity: .8;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+ 
+
 
 .login_icon{
     padding-top: 40px;
@@ -43,20 +49,20 @@
    
 }
 
-.slide{ 
+.custom-row-style{ 
     background-image: url(../../assets/slide3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 500px;
-    padding-left: 0px;
+    height: 640px;
+   padding: 0px;
     text-align: center;
 }
 
-.labelone h1{
+/*.labelone h1{
     padding-top: 180px;
     color: white;
-   /* color: #5ABDD1;*/
+   /* color: #5ABDD1;
     font-size: 80px;
     font-family: Calibri light;
     line-height: 10px;
@@ -64,7 +70,7 @@
 
 .labeltwo h2{
     color: white;
-   /* color: #F76464;*/
+   /* color: #F76464;
     font-size: 60px;
     font-family: Calibri light;
 }
@@ -75,7 +81,7 @@
    height: 500px; 
 }
 
-/*text animation*/
+/*text animation
 .label {
     padding-bottom: 100px;
     z-index: 1000;
@@ -105,12 +111,12 @@
 	0% {
 	    opacity: 0;
         transform: scale(0.5);
-	    /*transform: translateY(200px);*/
+	    /*transform: translateY(200px);
 	}
 	8% {
 	    opacity: 0.5;
         transform: scale(0.5);
-	    /*transform: translateY(0px);*/
+	    /*transform: translateY(0px);
 	}
 	17% {
 	    opacity: 1;
@@ -123,7 +129,7 @@
 	}
 	100% { opacity: 0 }
 }
-/* Show at least something when animations not supported */
+/* Show at least something when animations not supported 
 .no-cssanimations .slideshow li span{
 	opacity: 1;
 }
@@ -132,4 +138,4 @@
 }
 @media screen and (max-width: 600px) { 
 	.label h1 { font-size: 50px }
-}
+}*/
