@@ -9,7 +9,8 @@ export class EventService {
   constructor(private http: Http,private loginServise:LoginService) { }
 
   setMethod(event:any){
-    this.loginServise.createAuthenticationHeader();
+    console.log(event);
+    this.loginServise.createAuthenticationHeaderTwo();
     return this.http.post('/events', event, this.loginServise.options).map((response: Response) => response.json());
   }
   getAllEventData(){

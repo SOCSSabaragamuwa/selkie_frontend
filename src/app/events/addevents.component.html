@@ -11,7 +11,7 @@
     </div>
 
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <mat-error *ngIf="name.touched">
             <mat-error *ngIf="name.errors?.required">
     
@@ -64,7 +64,7 @@
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </div>
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <mat-error *ngIf="date.touched">
             <mat-error *ngIf="date.errors?.required">
     
@@ -87,7 +87,7 @@
       </mat-form-field>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <mat-error *ngIf="time.touched">
             <mat-error *ngIf="time.errors?.required">
     
@@ -110,7 +110,7 @@
       </mat-form-field>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
         <mat-error *ngIf="des.touched">
             <mat-error *ngIf="des.errors?.required">
     
@@ -127,10 +127,15 @@
     </div>
 
     
+    <div *ngIf="errorMessage">
+            {{errorMessage}}
     
+        </div>
     <div class="col-xs-2"> 
         <button  mat-raised-button color="warn">Add event</button>
     </div>
+
+    
    
   </form>
 </div>

@@ -32,6 +32,9 @@ errorobj;
     } ,
      err => {
        console.log(err);
+
+      
+      
        if ( err.status === 401 ) {
          this.router.navigate(['/login']);
         }
@@ -52,6 +55,9 @@ errorobj;
       err => {
         this.errorMessage = err._body.error;
         console.log(err);
+        this.errorMessage = err._body;
+        this.errorMessage = JSON.parse(this.errorMessage);
+        this.errorMessage = this.errorMessage.message;
         if(err.status === 401){
           // console.log("true");
           // if( localStorage.getItem('access_token') !== ""){

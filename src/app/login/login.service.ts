@@ -52,6 +52,17 @@ export class LoginService {
     headers.append("Content-Type", "application/x-www-form-urlencoded");
     this.options = new RequestOptions({ headers: headers });
   }
+  createAuthenticationHeaderTwo(){
+    const Token = localStorage.getItem('access_token');
+    this.authToken = Token;
+    console.log("Auth Token");
+    console.log(this.authToken);
+    const headers = new Headers();
+    const outh2 = "Bearer " +this.authToken;
+    headers.append("authorization",outh2);
+    headers.append("Content-Type", "application/json");
+    this.options = new RequestOptions({ headers: headers });
+  }
 
   LogOutdata(){
     localStorage.clear();
