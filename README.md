@@ -1,25 +1,25 @@
-##Prerequisires
+## Prerequisires
+- node latest stable version 
+- angular cli latest  stable vesion 
+- npm latest stable version
 
-```shell
-   node latest stable version 
-   angular cli latest  stable vesion 
-   npm latest stable version
-```
 
-##Table of content 
+## Table of content 
+
 *Installation(#installation)
 *Updating(#Updating your angular version)
 *Usage(#Usage selkie_frontend)
 
 
-##Instalation
-Install node js 
-Install npm
+## Instalation
+- Install node js 
+- Install npm
+
 Install angular globaly  using npm
-```shell
-   npm install -g angular-cli 
 ```
-##Updating your angular version
+npm install -g angular-cli 
+```
+## Updating your angular version
 ```shell
    npm uninstall -g angular-cli
    npm cache clean
@@ -31,13 +31,13 @@ Install angular globaly  using npm
 
 
 
-##Clone this repo.
+## Clone this repo.
 ```shell
 git clone https://github.com/WThamira/selkie_frontend  
 cd selkie_frontend
 ```
 
-##Install the npm packages
+## Install the npm packages
 ```shell
 npm install
 ```
@@ -53,7 +53,7 @@ npm install
   }
 }
 ```
-##Oath 2 configuration
+## Oath 2 configuration
 If You want to configure oath 2 for your specifcations move into the
 
 ```shell
@@ -73,7 +73,7 @@ observe
 
 ```
 change the client_id and client_secret for your specifications
-##Run this project
+## Run this project
 ```shell
 npm start
 ```
