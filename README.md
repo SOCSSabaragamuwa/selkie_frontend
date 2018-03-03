@@ -17,13 +17,13 @@
 
 Install angular globaly  using npm
 ```
-npm install -g angular-cli 
+npm install -g @angular-cli 
 ```
 ## Updating your angular version
 ```shell
-   npm uninstall -g angular-cli
+   npm uninstall -g @angular-cli
    npm cache clean
-   npm install -g angular-cli 
+   npm install -g @angular-cli 
 ```
 
 
